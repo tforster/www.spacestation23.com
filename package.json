@@ -1,0 +1,29 @@
+{
+  "name": "@tforster/git-new",
+  "version": "0.2.0",
+  "description": "A cloneable Git template for repeatable and consistent project bootstraps",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "template"
+  ],
+  "scripts": {
+    "lint": "npx eslint "
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tforster/git-new.git"
+  },
+  "author": "Troy Forster",
+  "bugs": {
+    "url": "https://github.com/tforster/git-new/issues"
+  },
+  "homepage": "https://github.com/tforster/git-new#readme"
+}
