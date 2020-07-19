@@ -1,6 +1,7 @@
 ### Project Specific ###
 build
 dist
+.env
 
 ### Misc. Tooling ###
 .gulp
