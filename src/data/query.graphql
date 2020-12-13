@@ -1,0 +1,10 @@
+{
+  getBucket(bucket_slug: "space-station-23", read_key: "U20kBVKBZsCUic8BPpcLbQajbdiyPJF48z91vv1CX0ATwrKkvU") {
+    objects {
+      title
+      slug
+      modelName: type_slug
+      metadata
+    }
+  }
+}

@@ -1,0 +1,55 @@
+service: webProducer
+org: spacestation23
+
+provider:
+  name: aws  
+  stage: ${env:STAGE}
+  runtime: nodejs12.x
+  region: ca-central-1
+  timeout: 20
+  memorySize: 512
+
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:PutObject'
+        - 's3:PutObjectAcl'
+        - 's3:GetObject'
+        - 's3:ListBucket'
+      Resource:
+        - arn:aws:s3:::wp.spacestation23.com/*
+        - arn:aws:s3:::wp.spacestation23.com
+    - Effect: 'Allow'
+      Action:
+        - 's3:GetObject'
+        - 's3:ListBucket'
+        - 's3:PutObject'
+        - 's3:PutObjectAcl'
+        - 's3:GetObject'
+        - 's3:ListBucket'
+      Resource:
+        - arn:aws:s3:::www.spacestation23.com/*
+        - arn:aws:s3:::www.spacestation23.com
+        - arn:aws:s3:::www.stage.spacestation23.com/*
+        - arn:aws:s3:::www.stage.spacestation23.com
+    - Effect: 'Allow'
+      Action:
+        - 'cloudfront:CreateInvalidation'
+      Resource: '*'
+
+functions:
+  build:
+    handler: handler.build
+    description: WebProducer for SpaceStation23 for ${env:STAGE}
+    events:
+      - http: 
+          method: POST
+          path: publish
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+package:
+  include:
+    - ../src/**
