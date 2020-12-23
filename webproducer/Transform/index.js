@@ -35,10 +35,22 @@ class Transform {
    * @memberof Transform
    */
   transform(rawData) {
-    // Cache the global data object for use elsewhere in the class instance
-    this.data = rawData;
+    const transformedData = {};
+    const episodes = [];
+    // The CosmicJS specific query returns a series of "objects" under a parent called getBucket. Pivot into an array of slugs.
 
-    return rawData;
+    rawData.getBucket.objects.forEach((obj) => {
+      if (obj.modelName != "episodes") {
+        transformedData[`/${obj.slug}`] = obj;
+      } else {
+        // Episodic data is found in getBucket.object[modelName=episodes]. Create an array the home page can use to render episodes.
+        episodes.push(obj);
+      }
+    });
+
+    transformedData["/index"].episodes = episodes;
+
+    return transformedData;
 
     // Create placeholder objects for transformed resources as well as common/global resources
     this.transformed = { common: [] };
@@ -102,154 +114,6 @@ class Transform {
     });
 
     return data;
-  }
-
-  /**
-   * Creates a text file that can be used as a placeholder in S3 and similar hosts. The targetAddress is later converted to a header
-   *
-   * @param {object} record:  A WebProducer page record
-   * @returns {object}:       A JSON object describing the source, target and type of redirect (currently supports only 301)
-   * @memberof Transform
-   */
-  _redirect(record) {
-    record.redirect = 301;
-    return record;
-  }
-
-  /**
-   * Implements the generic questionnaire data set as currently found in Money Script and KMBI forms
-   *
-   * @param {object} record:  A WebProducer page record
-   * @returns
-   * @memberof Transform
-   */
-  _questionnaire(record) {
-    // Use [].reduce to flatten the sub arrays
-    const questions = record.questions.reduce((acc, group) => {
-      // Create a template object with a placeholder for the answer
-      const template = {
-        groupId: group.id,
-        question: "",
-        answer: "",
-        heading: group.heading,
-        explanation: group.explanation,
-      };
-      // Reduce, aka flatten, the multiple arrays into one
-      const flattenedQuestions = group.questions.map((question) => {
-        // Get a copy of the template inside this iteration
-        const result = { ...template };
-        // Assign the iteration specific question
-        result.question = question;
-        return result;
-      });
-      return [...acc, ...flattenedQuestions];
-    }, []);
-
-    // Reassign the data.questions the new flattened questions array
-    record.questions = this.shuffleArray(questions);
-
-    return record;
-  }
-
-  _translate(record) {
-    // Model specific translators can be added here
-    const _translators = {
-      feed: () => this.blog.feedTransform(record),
-      blog_landing_page: () => this.blog.landingTransform(record),
-      post: () => this.blog.postTransform(record),
-      sitemap: () => this._sitemap(),
-      redirect: () => this._redirect(record),
-      kmbi_page: () => this._questionnaire(record),
-      money_script_page: () => this._questionnaire(record),
-      default: () => record,
-    };
-
-    return (_translators[record.modelName] || _translators["default"])(record);
-  }
-
-  /**
-   * Strips the .html extensions from the record data and references.
-   */
-  convertRecordToExtensionless(record) {
-    record.key = this.stripExtensionFromKey(record.key);
-    record.href = this.convertKeyToHref(record.key);
-
-    if (record.pageMeta && record.pageMeta[0]) {
-      record.meta = record.pageMeta[0];
-      if (record.meta.pageParent) {
-        const parent = record.meta.pageParent;
-        parent.key = this.stripExtensionFromKey(parent.key);
-        parent.href = this.convertKeyToHref(parent.key);
-        if (parent.pageMeta && parent.pageMeta[0]) {
-          parent.meta = parent.pageMeta[0];
-          if (parent.meta.pageChildren) {
-            parent.meta.pageChildren.forEach((child) => {
-              child.key = this.stripExtensionFromKey(child.key);
-              child.href = this.convertKeyToHref(child.key);
-              if (child.pageMeta && child.pageMeta[0]) {
-                child.meta = child.pageMeta[0];
-              }
-            });
-          }
-        }
-      }
-      if (record.meta.pageChildren) {
-        record.meta.pageChildren.forEach((child) => {
-          child.key = this.stripExtensionFromKey(child.key);
-          child.href = this.convertKeyToHref(child.key);
-          if (child.pageMeta && child.pageMeta[0]) {
-            child.meta = child.pageMeta[0];
-          }
-        });
-      }
-    }
-
-    return record;
-  }
-
-  /**
-   * Converts the key to the proper href to use, without the trailing index.
-   */
-  convertKeyToHref(key) {
-    if (!key || key.slice(-6) !== "/index") {
-      return key;
-    }
-    return key.replace("/index", "/");
-  }
-
-  /**
-   * Strips the specified extension from the key provided.
-   */
-  stripExtensionFromKey(key, extension) {
-    extension = extension || ".html";
-    if (!key || key.slice(-5) !== extension) {
-      return key;
-    }
-    return key.replace(extension, "");
-  }
-
-  /**
-   * Shuffles the provided array.
-   * @see https://stackoverflow.com/questions/2450954/
-   */
-  shuffleArray(array) {
-    let currentIndex = array.length;
-    let temporaryValue;
-    let randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
   }
 }
 

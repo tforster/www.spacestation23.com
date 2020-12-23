@@ -91,8 +91,7 @@
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="text-white font-weight-light mb-2 display-4">{{episodes.0.title}}
-            </h2>
+            <h2 class="text-white font-weight-light mb-2 display-4">{{episodes.0.title}} </h2>
             <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Boo Daley |
                   {{episodes.0.episode_date}}
                 </small></span></div>
@@ -108,6 +107,7 @@
     </div>
 
 
+    <!-- Recent Episodes -->
     <div class="site-section bg-light">
       <div class="container">
 
@@ -128,14 +128,17 @@
           <div class="text">
 
             <h3 class="font-weight-light"><a href="single-post.html">{{title}}</a></h3>
-            <div class="text-white mb-3"><span class="text-black-opacity-05"><small>{{episode_date}}<span
-                    class="sep">/</span> {{duration}}</small></span></div>
-            <p class="mb-4">One-liner that summarises this particular episode.</p>
+            <div class="text-white mb-3">
+              <span class="text-black-opacity-05">
+                <small>{{metadata.episode_date}}<span class="sep">/</span> {{metadata.duration}}</small>
+              </span>
+            </div>
+            <p class="mb-4">{{metadata.notes}}</p>
 
 
             <div class="player">
               <audio id="player2" preload="none" controls style="max-width: 100%">
-                <source src="{{enclosure_url}}" type="audio/mp3">
+                <source src="{{metadata.enclosure_url}}" type="audio/mp3">
               </audio>
             </div>
 
@@ -146,6 +149,7 @@
       </div>
     </div>
 
+    <!-- Behind the mic -->
     <div class="site-section">
       <div class="container" data-aos="fade-up">
         <div class="row mb-5">
@@ -293,8 +297,7 @@
     </div>
 
 
-
-
+    <!-- Subscribe CTA -->
     <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_1.jpg);"
       data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -319,7 +322,7 @@
     </div>
 
 
-
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">
