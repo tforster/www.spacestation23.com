@@ -1,11 +1,13 @@
 # Change Log
 
-v0.2.0 **Updated README.md to new format** (2020-05-29)
+v0.1.0 **Initial creation** (2020-07-01)
 
-- Also externalised this change log to CHANGELOG.md
-
-v0.1.1 **Updated eslint dependency version** (2020-05-29)
-
-v0.1.0 **Initial Creation** (2020-04-09)
-
-- Initial creation of this project and Git repository.
+- Created from [tforster/git-new](https://github.com/tforster/git-new) template
+- Control files updated to reflect Space Station 23
+- Added [Podca](https://themewagon.com/themes/free-bootstrap-4-html5-podcast-website-template-podca/) template source files
+- Included [tforster/webproducer](https://github.com/tforster/webproducer) page builder
+- Included [tforster/http2-server](https://github.com/tforster/http2-server) HTTP2 development server
+- ~~Removed the annoying [aos](https://michalsnik.github.io/aos/) jQuery plugin~~
+- ~~Removed the Owl Carousel jQuery plugin~~
+- ~~Removed the Countdown jQuery plugin~~
+- Removed all the scripts!

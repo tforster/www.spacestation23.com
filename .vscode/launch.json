@@ -1,0 +1,24 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "name": "publish",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeArgs": [
+        "--preserve-symlinks"
+      ],
+      "env": {
+        "AWS_PROFILE": "spacestation23"
+      },
+      "envFile": "${workspaceFolder}/webproducer/.env",
+      "program": "${workspaceFolder}/webproducer/index.js"
+    }
+  ]
+}

@@ -1,5 +1,10 @@
-# Contributing
+# Contributing <!-- omit in toc -->
 
+## Table of Contents <!-- omit in toc -->
+
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+  
 ## Prerequisites
 
 The prerequesites for contributing to this repo are the same is if you were developing with it.
@@ -8,11 +13,9 @@ The prerequesites for contributing to this repo are the same is if you were deve
 - [Node.js v12.13.0 and NPM 6.14.5](https://nodejs.org/en/download/)
 - [Git 2.25](https://git-scm.com/downloads)
 
-## Usage 
+## Usage
 
 ```sh
-# Fork it from GitHub https://github.com/tforster/git-new/fork
-
 # Create your feature branch
 git checkout -b {meaninful-branch-name}
 

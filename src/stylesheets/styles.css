@@ -1,0 +1,12 @@
+.album-covers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+}
+
+.album-covers img {
+  width: 150px;
+}

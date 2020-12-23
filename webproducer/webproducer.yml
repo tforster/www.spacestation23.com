@@ -1,0 +1,43 @@
+#################################################
+# WebProducer for Local and Serverless Building #
+#################################################
+templates: templates-fs
+destination: destination-${env:STAGE}
+data: ${env:BUILD_DATA}
+
+####################
+# Template Aliases #
+####################
+templates-fs:
+  type: filesystem
+  base: ./src
+
+#######################
+# Destination Aliases #
+#######################
+destination-dev:
+  type: filesystem
+  base: ./dist
+
+destination-stage:
+  type: s3
+  base: s3://www.stage.spacestation23.com
+  region: ca-central-1
+
+destination-prod:
+  type: s3
+  base: s3://www.spacestation23.com
+  region: ca-central-1  
+
+################
+# Data Aliases #
+################
+data-fs:
+  type: filesystem
+  base: ./src/data/data.json
+  published: true
+
+data-graphql:
+  type: graphql
+  base: https://graphql.cosmicjs.com/v2
+  token: ${env:GRAPHQL_API_TOKEN}
