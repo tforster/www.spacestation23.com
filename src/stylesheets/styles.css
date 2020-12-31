@@ -10,3 +10,69 @@
 .album-covers img {
   width: 150px;
 }
+
+.archiveRow td {
+  /* min-height: 100px;
+  line-height: 100px; */
+  vertical-align: top;
+}
+
+.archiveRow .airDate {
+  min-width: 100px;
+}
+
+.archiveRow .player {
+  vertical-align: middle;
+}
+
+.archiveRow:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.polaroid-container {
+  margin: auto;
+  background-color: lightgrey;
+  width: 330px;
+}
+
+.polaroid-container .polaroid {
+  /* position: absolute; */
+
+  border: 1px solid darkgrey;
+  background-color: white;
+  padding: 15px 15px 60px 15px;
+  box-shadow: 5px 10px 10px darkgrey;
+}
+.polaroid img {
+  width: 300px;
+}
+
+amp-img {
+  width: 50px;
+}
+
+amp-img .img {
+  width: 50px;
+}
+
+.appicon {
+  width: 50px;
+}
+
+.subscribe ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.subscribe li {
+  display: inline;
+}
+
+.subscribe img {
+  width: 165px;
+}
+
+.credits img {
+  width: 350px;
+  height: 350px;
+}

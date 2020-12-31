@@ -85,27 +85,35 @@
     </header>
 
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/spacestation23-hero.jpg);"
-      data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover" style="background-image: url(images/spacestation23-hero.jpg);" data-aos="fade"
+      data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="text-white font-weight-light mb-2 display-4">{{episodes.0.title}} </h2>
+            {{!-- <img src="images/albums/{{latestEpisode.Image}}" class="" style="width:150px">
+            </img> --}}
+            
+            <h2 class="text-white font-weight-light mb-2 display-4">Episode {{latestEpisode.Ep}}:
+              {{latestEpisode.Title}}
+            </h2>
+
             <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Boo Daley |
-                  {{episodes.0.episode_date}}
-                </small></span></div>
+                  {{latestEpisode.airDate}} | {{latestEpisode.Runtime}} </small></span>
+                  </div>
+
             <div class="player">
-              <audio id="player2" preload="none" controls style="max-width: 100%">
-                <source src="{{episodes.0.enclosure_url}}" type="audio/mp3">
+              <audio id="playerMain" preload="none" controls style="max-width: 100%">
+                <source src="{{latestEpisode.URL}}" type="audio/mp3">
               </audio>
             </div>
 
           </div>
+
+
         </div>
       </div>
     </div>
-
 
     <!-- Recent Episodes -->
     <div class="site-section bg-light">
@@ -117,44 +125,51 @@
           </div>
         </div>
 
-        {{#each episodes}}
-        <div class="d-block d-md-flex podcast-entry bg-white mb-5">
-          <div class="album-covers">
-            <div><img src="{{album_cover_1.url}}" /></div>
-            <div><img src="{{album_cover_2.url}}" /></div>
-            <div><img src="{{album_cover_3.url}}" /></div>
-            <div><img src="{{album_cover_4.url}}" /></div>
-          </div>
-          <div class="text">
-
-            <h3 class="font-weight-light"><a href="single-post.html">{{title}}</a></h3>
-            <div class="text-white mb-3">
-              <span class="text-black-opacity-05">
-                <small>{{metadata.episode_date}}<span class="sep">/</span> {{metadata.duration}}</small>
-              </span>
-            </div>
-            <p class="mb-4">{{metadata.notes}}</p>
-
-
-            <div class="player">
-              <audio id="player2" preload="none" controls style="max-width: 100%">
-                <source src="{{metadata.enclosure_url}}" type="audio/mp3">
-              </audio>
-            </div>
-
-          </div>
-        </div>
+        {{#each recentEpisodes}}
+        {{>recentEpisode.hbs}}
         {{/each}}
 
       </div>
     </div>
 
-    <!-- Behind the mic -->
+
+    <!-- Episodes Archives -->
     <div class="site-section">
+      <div class="container">
+
+        <div class="row mb-5" data-aos="fade-up">
+          <div class="col-md-12 text-center">
+            <h2 class="font-weight-bold text-black">The Archives</h2>
+            <p>Missed an episode? All our episodes are available to listen to from our archive.</p>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Episode</th>
+              <th>Air Date</th>
+              <th>Runtime</th>
+              <th>Show notes</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each archiveEpisodes}}
+            {{>archiveEpisode.hbs}}
+            {{/each}}
+          </tbody>
+          </table>
+
+      </div>
+    </div>
+
+    <!-- Behind the mic -->
+    <div class="site-section bg-light credits">
       <div class="container" data-aos="fade-up">
         <div class="row mb-5">
           <div class="col-md-12 text-center">
-            <h2 class="font-weight-bold text-black">Behind The Mic</h2>
+            <h2 class="font-weight-bold text-black">Credits and Acknowledgements</h2>
+            <p>Space Station 23 would not be possible without these fine folk!</p>
           </div>
         </div>
 
@@ -166,17 +181,19 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/person_1.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/boo-daley.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
-                <h2 class="mb-2 font-weight-light h4">Boo Daley</h2>
+                <h2 class="mb-2 font-weight-light h4">Greg Hunter</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Creative Director and Voice extraordinaire</span>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
+                <p class="mb-4">Greg is not only the creator of SpaceStation23, he is also the voice behind many of the
+                  characters
+                  including Boo and Kale.</p>
                 <p>
-                  <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
-                  <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
+                  <a href="https://facebook.com/ss23boo" class="text-white p-2"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/ss23boo" class="text-white p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://instagram.com/ss23boo" class="text-white p-2"><span class="icon-instagram"></span></a>
                 </p>
               </div>
             </div>
@@ -186,13 +203,15 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/ed-finlan.png" alt="Image" class="img-fluid">
+              <img src="images/bios/mayor.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">Ed Finlan</h2>
-                <span class="d-block mb-2 text-white-opacity-05">Marketing Director and voice of the Mayor</span>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
+                <span class="d-block mb-2 text-white-opacity-05">Cheerleader and Part-time Mayor</span>
+                <p class="mb-4">Ed has been a motivating force behind the launch of SpaceStation23 and makes occasional
+                  app-ear-ances as
+                  the voice of Mayor Eddy.</p>
                 <p>
                   <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
@@ -207,13 +226,13 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/person_3.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/johnnycarsonfeature.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">John Farley</h2>
-                <span class="d-block mb-2 text-white-opacity-05">Finance Director and celebrity interviewer</span>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
+                <span class="d-block mb-2 text-white-opacity-05">Celebrity Interviewer</span>
+                <p class="mb-4">John is our celebrity interviewer.</p>
                 <p>
                   <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
@@ -228,20 +247,20 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/troy-forster.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/troy-forster.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">Troy Forster</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Technical Director</span>
-                <p class="mb-4">CTO, idea factory, tinkerer, cyclist, hiker, vegetarian, animal lover working remotely
-                  from my cottage in Port Stanley.</p>
+                <p class="mb-4">Troy takes care of whatsits, thingamajigs and stuff on the interwebz.</p>
                 <p>
                   <a href="https://www.facebook.com/troy.forster.374" class="text-white p-2"><span
                       class="icon-facebook"></span></a>
                   <a href="https://twitter.com/tforster" class="text-white p-2"><span class="icon-twitter"></span></a>
                   <a href="https://www.linkedin.com/in/tforster/" class="text-white p-2"><span
                       class="icon-linkedin"></span></a>
+                      <a href="https://instagram.com/tforster" class="text-white p-2"><span class="icon-instagram"></span></a>
                 </p>
               </div>
 
@@ -253,16 +272,21 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/cjai.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/cjai.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">Eric Tremblay</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Station Manager, Amherst Island Radio</span>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
+                <p class="mb-4">CJAI-FM, known on air as Amherst Island Radio, is kind enough to provide weekly airtime
+                  for the
+                  transmission of SpaceStation23 into the ether.</p>
+                <p>Please consider <a href="https://www.cjai.ca/donate/">donating</a>.
+                </p>
                 <p>
-                  <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
-                  <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://www.facebook.com/amherstislandradio" class="text-white p-2"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/cjai921fm" class="text-white p-2"><span class="icon-twitter"></span></a>
+                  <a href="https://twitter.com/cjai921fm" class="text-white p-2"><span class="icon-twitter"></span></a>
                   <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
                 </p>
               </div>
@@ -274,7 +298,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/person_6.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/person_6.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
@@ -298,24 +322,28 @@
 
 
     <!-- Subscribe CTA -->
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_1.jpg);"
+    <div class="site-blocks-cover overlay inner-page-cover subscribe" style="background-image: url(images/hero_bg_3.jpg);"
       data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
             <h2>Subscribe</h2>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit nihil saepe libero sit odio
-              obcaecati veniam.</p>
-            <form action="#" method="post" class="site-block-subscribe">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent"
-                  placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
+            <p class="mb-5">Never miss an episode. Subscribe to Space Station 23 in your favourite podcast app (coming
+              soon).</p>
+            <ul>
+              <li>
+                <img src="images/podcasts/apple.svg"></img>
+              </li>
+              <li>
+                <img src="images/podcasts/amazon.png"></img>
+              </li>
+              <li>
+                <img src="images/podcasts/spotify.svg"></img>
+              </li>
+              <li><img src="images/podcasts/google.svg"></img></li>
+              <li><img src="images/podcasts/iheartradio.png"></img></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -328,46 +356,17 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">About Podca</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque,
-                consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima
-                minus odio!</p>
+              <h3 class="footer-heading mb-4">About Space Station 23</h3>
+              <p>@Greg can you write a one paragraph sales-y blurb for here?</p>
             </div>
 
             <div class="mb-5">
               <h3 class="footer-heading mb-4">Recent Podcast</h3>
               <div class="block-25">
                 <ul class="list-unstyled">
-                  <li class="mb-3">
-                    <a href="#" class="d-flex">
-                      <figure class="image mr-4">
-                        <img src="images/img_1.jpg" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-3">
-                    <a href="#" class="d-flex">
-                      <figure class="image mr-4">
-                        <img src="images/img_1.jpg" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-3">
-                    <a href="#" class="d-flex">
-                      <figure class="image mr-4">
-                        <img src="images/img_1.jpg" alt="" class="img-fluid">
-                      </figure>
-                      <div class="text">
-                        <h3 class="heading font-weight-light">Lorem ipsum dolor sit amet consectetur elit</h3>
-                      </div>
-                    </a>
-                  </li>
+                  {{#each recentEpisodes}}
+                  {{>recentEpisodeSmall.hbs}}
+                  {{/each}}
                 </ul>
               </div>
             </div>
@@ -381,9 +380,9 @@
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">Matches</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Archive</a></li>
+                  <li><a href="#">Credit and Acknowledgements</a></li>
+                  <li><a href="#">Subscribe</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
@@ -391,7 +390,6 @@
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Privacy Policy</a></li>
                   <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Membership</a></li>
                 </ul>
               </div>
             </div>
@@ -401,10 +399,9 @@
                 <h3 class="footer-heading mb-4">Follow Us</h3>
 
                 <div>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                  <a href="https://www.facebook.com/ss23boo" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/ss23boo" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="https://instagram.com/ss23boo" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 </div>
               </div>
             </div>
@@ -447,7 +444,7 @@
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
-              Copyright &copy; 2020 All rights reserved SpaceStation23
+              Copyright &copy; 2021 All rights reserved SpaceStation23
             </p>
           </div>
 

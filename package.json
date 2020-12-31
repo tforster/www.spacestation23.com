@@ -15,9 +15,7 @@
     "init": "sh scripts/install.sh",
     "start": "node node_modules/http2-server --root dist --cert . --port 3704",
     "publish": "export $(cat webproducer/.env | xargs) && sh webproducer/scripts/publish.sh",
-    "deploy": "export $(cat webproducer/.env | xargs) && sh webproducer/scripts/deploy.sh",
-    "bump": "npm version $@ --git-tag-version=false",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "export $(cat webproducer/.env | xargs) && sh webproducer/scripts/deploy.sh"
   },
   "repository": {
     "type": "git",

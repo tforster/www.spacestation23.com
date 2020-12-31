@@ -2,6 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 
 // Project dependencies
+let episodes = require("../../src/data/data.json");
 
 /**
  * Transforms and reshapes data into an array of page data objects
@@ -36,7 +37,9 @@ class Transform {
    */
   transform(rawData) {
     const transformedData = {};
-    const episodes = [];
+    episodes = episodes.sort((a, b) => (a["Air Date"] < b["Air Date"] ? 1 : -1));
+    const recentEpisodes = episodes.slice(1, 4);
+    //const episodes = [];
     // The CosmicJS specific query returns a series of "objects" under a parent called getBucket. Pivot into an array of slugs.
 
     rawData.getBucket.objects.forEach((obj) => {
@@ -44,11 +47,13 @@ class Transform {
         transformedData[`/${obj.slug}`] = obj;
       } else {
         // Episodic data is found in getBucket.object[modelName=episodes]. Create an array the home page can use to render episodes.
-        episodes.push(obj);
+        //episodes.push(obj);
       }
     });
 
-    transformedData["/index"].episodes = episodes;
+    transformedData["/index"].recentEpisodes = recentEpisodes;
+    transformedData["/index"].latestEpisode = episodes[0];
+    transformedData["/index"].archiveEpisodes = episodes.sort((a, b) => (a["Air Date"] > b["Air Date"] ? 1 : -1));
 
     return transformedData;
 

@@ -1,0 +1,6 @@
+GET https://spreadsheets.google.com/feeds/cells/1Gq7bFFQBHwsWKUl-fMKmAauxixhf8mpiM7yvfjycxIc/1/public/full?alt=json HTTP/1.1
+###
+GET https://sheets.googleapis.com/v4/spreadsheets/1Gq7bFFQBHwsWKUl-fMKmAauxixhf8mpiM7yvfjycxIc/values/Sheet1!A1:D5?key=c8cc8be33232934f6b5f8e8a39b2c10944a99bc2 HTTP/1.1
+###
+
+GET https://sheets.googleapis.com/v4/spreadsheets/1Gq7bFFQBHwsWKUl-fMKmAauxixhf8mpiM7yvfjycxIc?includeGridData=true&ranges=E2&fields=sheets%2Fdata%2FrowData%2Fvalues%2FuserEnteredValue&key=AIzaSyBJ_FuI7TfTCrBjRiV1-fRHysFg0KdQPsw HTTP/1.1
