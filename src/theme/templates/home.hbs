@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
   <link rel="stylesheet" href="style.css">
 
+  <link rel="icon" href="/images/SS23logo1.jpg" type="image/jpg">
   <!-- Our custom stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -93,14 +94,14 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             {{!-- <img src="images/albums/{{latestEpisode.Image}}" class="" style="width:150px">
             </img> --}}
-            
+
             <h2 class="text-white font-weight-light mb-2 display-4">Episode {{latestEpisode.Ep}}:
               {{latestEpisode.Title}}
             </h2>
 
             <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Boo Daley |
                   {{latestEpisode.airDate}} | {{latestEpisode.Runtime}} </small></span>
-                  </div>
+            </div>
 
             <div class="player">
               <audio id="playerMain" preload="none" controls style="max-width: 100%">
@@ -143,26 +144,23 @@
             <p>Missed an episode? All our episodes are available to listen to from our archive.</p>
           </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Episode</th>
-              <th>Air Date</th>
-              <th>Runtime</th>
-              <th>Show notes</th>
-              <th>&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each archiveEpisodes}}
-            {{>archiveEpisode.hbs}}
-            {{/each}}
-          </tbody>
-          </table>
+        <div class="table-container" role="table" aria-label="Episode Archive">
+          <div class="flex-table header" role="rowgroup">
+            <div class="flex-row" role="columnheader">Ep</div>
+            <div class="flex-row" role="columnheader">Air Date</div>
+            <div class="flex-row" role="columnheader">Notes</div>
+            <div class="flex-row" role="columnheader">Featured Artists</div>
+            <div class="flex-row" role="columnheader">Listen</div>
+          </div>
 
+          {{#each archiveEpisodes}}
+          {{>archiveEpisode.hbs}}
+          {{/each}}
+
+        </div>
       </div>
     </div>
-
+    
     <!-- Behind the mic -->
     <div class="site-section bg-light credits">
       <div class="container" data-aos="fade-up">
@@ -185,9 +183,9 @@
 
               <div class="text">
 
-                <h2 class="mb-2 font-weight-light h4">Greg Hunter</h2>
+                <h2 class="mb-2 font-weight-light h4">Boo Daley</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Creative Director and Voice extraordinaire</span>
-                <p class="mb-4">Greg is not only the creator of SpaceStation23, he is also the voice behind many of the
+                <p class="mb-4">Boo is not only the creator of SpaceStation23, he is also the voice behind many of the
                   characters
                   including Boo and Kale.</p>
                 <p>
@@ -203,15 +201,17 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/mayor.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/ed-finlan.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">Ed Finlan</h2>
-                <span class="d-block mb-2 text-white-opacity-05">Cheerleader and Part-time Mayor</span>
-                <p class="mb-4">Ed has been a motivating force behind the launch of SpaceStation23 and makes occasional
-                  app-ear-ances as
-                  the voice of Mayor Eddy.</p>
+                <span class="d-block mb-2 text-white-opacity-05">The voice of Mayor Eddie on the show, hailing from
+                  Thurlow Township near Belleville, Ontario.
+                </span>
+                <p class="mb-4"> Ed and Boo have been friends since they were 5 years of age. </p>
+                <p>Ed is Thankful to be involved in an original High Quality Radio Program.
+                </p>
                 <p>
                   <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
@@ -226,13 +226,16 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/johnnycarsonfeature.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/john-farley.jpg" alt="Image" class="img-fluid">
 
               <div class="text">
 
                 <h2 class="mb-2 font-weight-light h4">John Farley</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Celebrity Interviewer</span>
-                <p class="mb-4">John is our celebrity interviewer.</p>
+                <p class="mb-4">John discovered his appreciation for music when he played in the Kindergarden Rhythm
+                  Band. Today his best instrument is the radio.</p>
+                <p>45 years ago John met Ed at Western surprising many who know both and cannot figure
+                  how they earned admission.</p>
                 <p>
                   <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
                   <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
@@ -260,7 +263,7 @@
                   <a href="https://twitter.com/tforster" class="text-white p-2"><span class="icon-twitter"></span></a>
                   <a href="https://www.linkedin.com/in/tforster/" class="text-white p-2"><span
                       class="icon-linkedin"></span></a>
-                      <a href="https://instagram.com/tforster" class="text-white p-2"><span class="icon-instagram"></span></a>
+                  <a href="https://instagram.com/tforster" class="text-white p-2"><span class="icon-instagram"></span></a>
                 </p>
               </div>
 
@@ -278,7 +281,8 @@
 
                 <h2 class="mb-2 font-weight-light h4">Eric Tremblay</h2>
                 <span class="d-block mb-2 text-white-opacity-05">Station Manager, Amherst Island Radio</span>
-                <p class="mb-4">CJAI-FM, known on air as Amherst Island Radio, is kind enough to provide weekly airtime
+                <p class="mb-4">CJAI-FM, known on air as Amherst Island Radio, is kind enough to provide weekly
+                  airtime
                   for the
                   transmission of SpaceStation23 into the ether.</p>
                 <p>Please consider <a href="https://www.cjai.ca/donate/">donating</a>.
