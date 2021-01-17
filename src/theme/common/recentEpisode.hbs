@@ -1,13 +1,13 @@
 <div class="d-block d-md-flex podcast-entry bg-white mb-5">
 
-  <div class="image" style="background-image: url('images/albums/{{Image}}');"></div>
+  <div class="image" style="background-image: url('images/albums/{{thumbnail}}');"></div>
   <div class="text">
 
-    <h3 class="font-weight-light"><a href="single-post.html">{{Ep}}: {{Title}}</a></h3>
+    <h3 class="font-weight-light"><a href="single-post.html">{{episode}}: {{title}}</a></h3>
     <p class="mb-4">{{"Additional show notes"}}</p>
     <div class="text-white mb-3">
       <span class="text-black-opacity-05">
-        <small>{{airDate}}<span class="sep">/</span> {{Runtime}}</small>
+        <small>{{airDate}}<span class="sep">/</span> {{runtime}}</small>
       </span>
     </div>
 
@@ -15,7 +15,7 @@
 
     <div class="player">
       <audio id="player2" preload="none" controls style="max-width: 100%">
-        <source src="{{URL}}" type="audio/mp3">
+        <source src="{{url}}" type="audio/mp3">
       </audio>
     </div>
 
