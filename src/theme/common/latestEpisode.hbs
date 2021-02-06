@@ -4,19 +4,17 @@
   <div class="text">
 
     <h3 class="font-weight-light"><a href="single-post.html">{{episode}}: {{title}}</a></h3>
-    <p class="mb-4">{{"Additional show notes"}}</p>
+    <p class="mb-4">{{description}}</p>
     <div class="text-white mb-3">
       <span class="text-black-opacity-05">
         <small>{{airDate}}<span class="sep">/</span> {{runtime}}</small>
       </span>
     </div>
 
-
-
+    
     <div class="player">
-      <audio id="player2" preload="none" controls style="max-width: 100%">
-        <source src="{{url}}" type="audio/mp3">
-      </audio>
+      {{>player.hbs}}
+
     </div>
 
   </div>

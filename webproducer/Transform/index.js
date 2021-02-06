@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 
 // Project dependencies
-let episodes = require("../../src/data/data.json");
+const data = require("../../src/data/data.json");
 
 /**
  * Transforms and reshapes data into an array of page data objects
@@ -37,8 +37,8 @@ class Transform {
    */
   transform(rawData) {
     const transformedData = {};
-    episodes = episodes.sort((a, b) => (a["Air Date"] < b["Air Date"] ? 1 : -1));
-    const recentEpisodes = episodes.slice(1, 4);
+    const episodes = data.feed.items.sort((a, b) => (a["airDate"] < b["airDate"] ? 1 : -1));
+    const latestEpisodes = episodes.slice(0, 3);
     //const episodes = [];
     // The CosmicJS specific query returns a series of "objects" under a parent called getBucket. Pivot into an array of slugs.
 
@@ -51,41 +51,19 @@ class Transform {
       }
     });
 
-    transformedData["/index"].recentEpisodes = recentEpisodes;
+    // Episodes
+    transformedData["/index"].latestEpisodes = latestEpisodes;
     transformedData["/index"].latestEpisode = episodes[0];
-    transformedData["/index"].archiveEpisodes = episodes.sort((a, b) => (a["Air Date"] > b["Air Date"] ? 1 : -1));
+    transformedData["/index"].archiveEpisodes = episodes.sort((a, b) => (a["airDate"] > b["airDate"] ? 1 : -1));
+
+    // Podcast Sources
+    transformedData["/index"].podcastSources = data.podcastSources;
+
+    // RSS Feed
+    transformedData["/feed.xml"] = data.feed;
+    this._feed(transformedData["/feed.xml"]);
 
     return transformedData;
-
-    // Create placeholder objects for transformed resources as well as common/global resources
-    this.transformed = { common: [] };
-
-    // Iterate the mixed data types (arrays, objects, etc) and normalise into an array of objects each containing a single resource
-    for (const iterator in rawData) {
-      const datum = rawData[iterator];
-      if (Array.isArray(datum)) {
-        // Flatten the array of items into the final transformed result
-        let record = datum.length;
-        while (record--) {
-          //for (let record = 0; record < datum.length; record++) {
-          addToTransformedResult(datum[record]);
-        }
-      } else if (datum) {
-        addToTransformedResult(datum);
-      }
-    }
-
-    // // Call Blog class methods to perform additional data manipulation to create a landing page, category pages and feed.xml
-    // this.blog.finalise();
-    // this.transformed[this.blog.landingPage.key] = this.blog.landingPage;
-    // this.transformed[this.blog.feed.key] = this.blog.feed;
-    // this.transformed = {
-    //   ...this.transformed,
-    //   ...this.blog.categoryLandingPages,
-    //   ...this.blog.postPages,
-    // };
-
-    return this.transformed;
   }
 
   /**
@@ -119,6 +97,66 @@ class Transform {
     });
 
     return data;
+  }
+
+  /**
+   * The RSS feed and it's item children have very specific requirements to pass feed validation and be accepted by iTunes
+   * - Note that we do hand construct some XML here. If the feed changes often and drastically we may want to consider adding an XML
+   *   parser module to eliminate human hand-coding errors. But that will add a lot of weight in Kb.
+   * - Can be validated with:
+   *  - https://validator.w3.org/feed/
+   *  - https://castfeedvalidator.com/
+   *
+   * @param {object} feed:  An object containing metadata describing both the feed and it's children (aka items)
+   * @memberof Transform
+   */
+  _feed(feed) {
+    feed.modelName = "feed";
+    // Sub categories have to be converted to nested xml itunes:category elements and look something like
+    //
+    // "categories": {
+    //   "Society &amp; Culture": [
+    //     "Documentary",
+    //   ],
+    //   "Health": [
+    //     "Mental Health"
+    //   ]
+    // },
+    //
+    // <itunes:category text="Society &amp; Culture">
+    //   <itunes:category text="Documentary" />
+    // </itunes:category>
+    // <itunes:category text="Health">
+    //   <itunes:category text="Mental Health" />
+    // </itunes:category>
+    let tmpCategories = "";
+    for (const category in feed.categories) {
+      tmpCategories += `<itunes:category text="${category}">`;
+      feed.categories[category].forEach((sub) => {
+        tmpCategories += `<itunes:category text="${sub}" />`;
+      });
+      tmpCategories += "</itunes:category>";
+    }
+
+    // Replace feed.categories with new XML string
+    feed.categories = tmpCategories;
+
+    // The feed has an itunes:explicit tag and so do the items
+    feed.explicit = feed.explicit ? "yes" : "no";
+
+    // Transform the child items as required
+    feed.items.forEach((item) => {
+      item.explicit = item.explicit ? "yes" : "no";
+
+      if (feed.trackerPrefix) {
+        item.audio.url = `${feed.trackerPrefix}${item.url.replace("https://", "")}`;
+      }
+      // TODO: Add support to transofrms via WebProducer for environments (dev, stage, prod) to variabalise properties like this.
+      //item.link = `https://www.rememberthispodcast.com${item.slug}`;
+
+      // UTCString() is an iTunes required format
+      item.pubDate = new Date(item.airDate).toUTCString();
+    });
   }
 }
 

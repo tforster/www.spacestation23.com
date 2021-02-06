@@ -4,10 +4,44 @@ class SpaceStation23 {
   }
 
   _bindEvents() {
+    // This is Javascript and we are here so we must be able to use the styled audio player
+    document.querySelectorAll(".native-player").forEach((player) => {
+      player.controls = false;
+    });
+
+    document.querySelectorAll(".styled-player").forEach((player) => {
+      player.style.display = "block";
+    });
+
+    // Listen Now button
+    document.querySelector("#btnListenNow").addEventListener("click", (e) => {
+      // Don't prevent default because we want to scroll to the Latest Episodes
+      // Click the styled player button so that we get styled player feedback. It will start the underlying HTML5 Audio.
+      document.querySelectorAll(".styled-player")[0].querySelector("button[title=Play]").click();
+    });
+
+    document.querySelectorAll(".styled-player button[title=Play]").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const player = document.querySelector(`#player-${e.target.parentNode.parentNode.dataset.episode}`);
+        if (player.paused) {
+          e.target.title = "Pause";
+          e.target.ariaLabel = "Pause";
+          player.play();
+        } else {
+          e.target.title = "Play";
+          e.target.ariaLabel = "Play";
+          player.pause();
+        }
+
+        ["mejs__play", "mejs__pause"].map((v) => e.target.parentNode.classList.toggle(v));
+      });
+    });
+
     // List of sections to observe and their respective intersection ratios
     const observableSections = {
       hero: 0.5,
-      "recent-episodes": 0.9,
+      "latest-episodes": 0.9,
       subscribe: 0.5,
       archives: 0.0,
     };
@@ -25,6 +59,7 @@ class SpaceStation23 {
         const th = observableSections[entry.target.id] || 0;
         console.log(hash, entry.intersectionRatio);
         const navLink = document.querySelector(`a[href="${hash}"]`);
+
         if (entry.isIntersecting && entry.intersectionRatio > th) {
           console.log("E", entry.target.id, th);
           navLink.parentNode.classList.add("active");
@@ -37,39 +72,10 @@ class SpaceStation23 {
     // Start observing...
     const observer = new IntersectionObserver(cb, options);
 
-    //   (entries) => {
-    //     entries.forEach((entry) => {
-    //       const hash = "#" + entry.target.id;
-    //       const navEl = document.querySelector(`a[href="${hash}"]`);
-    //       if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-    //         navEl.classList.add("active");
-    //         // console.log(`${entry.target.id} in the view`);
-    //         // // Remove active from all items
-    //         // document.querySelectorAll(".nav-item").forEach((navItem) => {
-    //         //   navItem.classList.remove("active");
-    //         // });
-    //         // const section = document.querySelector(`.nav-link[href$='${entry.target.id}']`);
-    //         // if (section) {
-    //         //   console.log(section.parentNode);
-    //         //   section.parentNode.classList.add("active");
-    //         // }
-    //       } else {
-    //         navEl.classList.remove("active");
-    //       }
-    //     });
-    //   }
-    // );
-
     for (const [key, val] of Object.entries(observableSections)) {
       console.log(document.querySelector(`#${key}`));
       observer.observe(document.querySelector(`#${key}`));
     }
-
-    // document.querySelectorAll(".tinyPlayer").forEach((t) => {
-    //   t.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //   });
-    // });
   }
 }
 

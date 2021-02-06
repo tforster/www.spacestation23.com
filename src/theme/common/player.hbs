@@ -1,0 +1,44 @@
+<div class="styled-player" style="display:none">
+  <span class="mejs__offscreen">Audio Player</span>
+  <div id="mep_0" class="mejs__container mejs__audio" tabindex="0" role="application" aria-label="Audio Player"
+    style="width: 760px; height: 40px; min-width: 241px;">
+    <div class="mejs__inner">
+
+
+      <div class="mejs__controls" data-episode="{{episode}}">
+        <div class="mejs__button mejs__playpause-button mejs__play">
+          <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0"></button>
+        </div>
+        <div class="mejs__time mejs__currenttime-container" role="timer" aria-live="off"><span
+            class="mejs__currenttime">00:00</span>
+        </div>
+
+        <div class="mejs__time-rail"><span class="mejs__time-total mejs__time-slider" role="slider" tabindex="0"
+            aria-label="Time Slider" aria-valuemin="0" aria-valuemax="NaN" aria-valuenow="0"
+            aria-valuetext="00:00"><span class="mejs__time-buffering" style="display: none;"></span><span
+              class="mejs__time-loaded"></span><span class="mejs__time-current"></span><span
+              class="mejs__time-hovered no-hover"></span><span class="mejs__time-handle"><span
+                class="mejs__time-handle-content"></span></span><span class="mejs__time-float"
+              style="display: none; left: 0px;"><span class="mejs__time-float-current">00:00</span><span
+                class="mejs__time-float-corner"></span></span></span>
+        </div>
+        <div class="mejs__time mejs__duration-container"><span class="mejs__duration">00:00</span></div>
+
+        <div class="mejs__button mejs__volume-button mejs__mute"><button type="button" aria-controls="mep_0"
+            title="Mute" aria-label="Mute" tabindex="0"></button></div><a class="mejs__horizontal-volume-slider"
+          href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100"
+          role="slider"><span class="mejs__offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
+          <div class="mejs__horizontal-volume-total">
+            <div class="mejs__horizontal-volume-current" style="left: 0px; width: 100%;"></div>
+            <div class="mejs__horizontal-volume-handle" style="left: 100%;"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<audio id="player-{{episode}}" class="native-player" preload="none" controls style="max-width: 100%">
+  <source src="{{url}}" type="audio/mp3">
+</audio>
