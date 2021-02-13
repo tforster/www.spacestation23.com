@@ -68,17 +68,17 @@ amp-img .img {
   height: 350px;
 }
 
+
 /* The Archives */
 .table-container {
   display: block;
   margin: 2em auto;
   width: 90%;
 }
-
 .flex-table {
   display: grid;
-  grid-template-columns: 5% 15% 35% 35% 10%;
-  grid-template-rows: 100% auto;
+  grid-template-columns: 5% 15% 20% 25% 25% 10%;
+  grid-template-rows: 100%;
   border-left: solid 1px #d9d9d9;
   transition: 0.5s;
 }
@@ -101,21 +101,14 @@ amp-img .img {
 .flex-table:hover svg {
   fill: orangered;
 }
-
 .flex-row {
   display: block;
   width: 100%;
-
   padding: 0.5em 0.5em;
   border-right: solid 1px #d9d9d9;
   border-bottom: solid 1px #d9d9d9;
 }
-/* @media all and (min-width: 576px)  {
-  .credits img {
-    width: 300px;
-    height: 300px;
-  }  
-} */
+
 @media all and (min-width: 431px) and (max-width: 768px) {
   .flex-table {
     display: grid;
@@ -137,9 +130,9 @@ amp-img .img {
 
 @media all and (max-width: 430px) {
   .flex-table {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100%);
-    grid-template-rows: 100% auto;
+
+     grid-template-columns: repeat(auto-fill, 100%); 
+    grid-template-rows: auto;
   }
   .flex-table .flex-row {
     border-bottom: 0;
@@ -152,6 +145,26 @@ amp-img .img {
     grid-column-start: auto;
     grid-column-end: auto;
   }
+
+  .flex-table.header {
+    display:none;
+  }
+  .flex-table div:first-child {
+    display:none;
+  }
+  .flex-table div:nth-child(5) {
+    display:none;
+  }
+  .flex-table div:nth-child(3) {
+    font-weight:bold;
+    
+  }
+  .flex-table div:nth-child(2) {
+    font-size: 0.8rem;
+    
+  }
+  .flex-table:nth-of-type(2){
+  border-top: solid 1px #d9d9d9;}
 }
 
 svg {
@@ -163,23 +176,24 @@ svg {
 html {
   scroll-behavior: smooth;
 }
-
 h1 {
   font-size: inherit;
 }
-
 .navbar {
   backdrop-filter: blur(10px);
   background-color: rgba(255, 0, 0, 0.9);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  position: fixed;
+width: 100%;
+
 }
 .nav-item {
   color: #000 !important;
 }
-
 .nav-item.active {
   color: white;
 }
+
 
 /* Hero */
 
@@ -187,7 +201,6 @@ h1 {
   margin-top: -61px;
   background-position: 8% center;
 }
-
 .hero-album {
   width: 200px;
   height: 200px;
@@ -195,17 +208,18 @@ h1 {
 .navbar img {
   width: 40px;
 }
-
 .site-blocks-cover .player {
   bottom:-60px;
 }
-
-
+.btn-primary {
+background-color: #eb1c0f;
+    border-color: #df1b0e;
+}
+/* Player */
 .native-player {
   width:100%;
   min-width:100%
 }
-
 
 /* Podcasts */
 .podcast-sources {
@@ -214,14 +228,12 @@ h1 {
   box-shadow: 0 0 0.5em rgb(0 0 0 / 50%);
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
-
 .podcast-source {
   width: 100px;
   margin:5px;
 }
-
 .podcast-source img {
   width:65px;
 }

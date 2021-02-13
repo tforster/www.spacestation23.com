@@ -36,20 +36,21 @@ class Transform {
    * @memberof Transform
    */
   transform(rawData) {
-    const transformedData = {};
-    const episodes = data.feed.items.sort((a, b) => (a["airDate"] < b["airDate"] ? 1 : -1));
+    const transformedData = rawData;
+
+    const episodes = rawData.feed.items.sort((a, b) => (a["airDate"] < b["airDate"] ? 1 : -1));
     const latestEpisodes = episodes.slice(0, 3);
     //const episodes = [];
     // The CosmicJS specific query returns a series of "objects" under a parent called getBucket. Pivot into an array of slugs.
 
-    rawData.getBucket.objects.forEach((obj) => {
-      if (obj.modelName != "episodes") {
-        transformedData[`/${obj.slug}`] = obj;
-      } else {
-        // Episodic data is found in getBucket.object[modelName=episodes]. Create an array the home page can use to render episodes.
-        //episodes.push(obj);
-      }
-    });
+    // rawData.getBucket.objects.forEach((obj) => {
+    //   if (obj.modelName != "episodes") {
+    //     transformedData[`/${obj.slug}`] = obj;
+    //   } else {
+    //     // Episodic data is found in getBucket.object[modelName=episodes]. Create an array the home page can use to render episodes.
+    //     //episodes.push(obj);
+    //   }
+    // });
 
     // Episodes
     transformedData["/index"].latestEpisodes = latestEpisodes;

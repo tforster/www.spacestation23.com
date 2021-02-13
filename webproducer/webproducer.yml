@@ -37,7 +37,3 @@ data-fs:
   base: ./src/data/data.json
   published: true
 
-data-graphql:
-  type: graphql
-  base: https://graphql.cosmicjs.com/v2
-  token: ${env:GRAPHQL_API_TOKEN}

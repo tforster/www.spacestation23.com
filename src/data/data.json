@@ -1,4 +1,12 @@
 {
+  "/index": {
+    "modelName": "home",
+    "title": "Space Station 23",
+    "description": "The official site for Space Station 23"
+  },
+  "/robots.txt": {
+    "modelName": "robots"
+  },
   "podcastSources": [
     {
       "title": "RSS",
@@ -6,14 +14,9 @@
       "href": "https://www.spacestation23.com/feed.xml"
     },
     {
-      "title": "iTune",
+      "title": "iTunes",
       "src": "ios.svg",
       "href": "https://podcasts.apple.com"
-    },
-    {
-      "title": "Spotify",
-      "src": "spotify.svg",
-      "href": "https://www.spotify.com/ca-en/"
     },
     {
       "title": "Google",
@@ -24,27 +27,8 @@
       "title": "iHeart Radio",
       "src": "iheart-radio.png",
       "href": "https://www.iheart.com/"
-    },
-    {
-      "title": "CastBox",
-      "src": "castbox.png",
-      "href": "https://castbox.fm/"
-    },
-    {
-      "title": "Deezer",
-      "src": "deezer.png",
-      "href": "https://www.deezer.com/en/"
-    },
-    {
-      "title": "RadioPublic",
-      "src": "radio-public.svg",
-      "href": "https://podcasters.radiopublic.com/"
-    },
-    {
-      "title": "TuneIn",
-      "src": "tunein.png",
-      "href": "https://help.tunein.com/contact/add-podcast-S19TR3Sdf"
     }
+
   ],
   "feed": {
     "title": "Space Station 23",
@@ -58,10 +42,15 @@
     "feedType": "",
     "keywords": [],
     "categories": {
-      "c1": [],
-      "c2": [
-        "a",
-        "b"
+      "Music": [
+        "Music Commentary",
+        "Music History"
+      ],
+      "Fiction": [
+        "Comedy Fiction"
+      ],
+      "News": [
+        "Entertainment News"
       ]
     },
     "trackerPrefix": "",
@@ -115,9 +104,9 @@
         "thumbnail": "lovin-spoonful.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep4.mp3"
       },
-  {
+      {
         "expt": false,
-    "episode": 5,
+        "episode": 5,
         "version": "",
         "airDate": "2020-07-03",
         "runtime": "00:45:30",
@@ -414,6 +403,18 @@
         "featuredArtists": "Patty Smyth, Justin Townes Earle, Rupert Hine, Stevie Wonder",
         "thumbnail": "songs-in-the-key-of-life.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep29.mp3"
+      },
+      {
+        "explicit": false,
+        "episode": 30,
+        "version": "",
+        "airDate": "2021-02-12",
+        "runtime": "00:36:49",
+        "title": "Hitsville- A tribute to Motown",
+        "description": "With the passing of Supreme's legend, Mary Wilson, I had to reflect on the magnificent Black History that was MOTOWN",
+        "featuredArtists": "Smokey Robinson and the Miracles, Martha and the Vandellas, The Supremes, Marvin Gaye, Four Tops, The Temptations, Gladys Knight and the Pips",
+        "thumbnail": "supremes.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep30.mp3"
       }
     ]
   }
