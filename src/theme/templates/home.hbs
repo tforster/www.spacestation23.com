@@ -127,23 +127,14 @@
         <div class="row mb-5" data-aos="fade-up">
           <div class="col-md-12 text-center">
             <h2 class="font-weight-bold text-black">The Archives</h2>
-            <p>Missed an episode? All our episodes are available to listen to from our archive.</p>
+            <p>Missed an episode? All our episodes are available to listen to from our archive, hosted by <a href="cjai.ca">Amherst
+                Island Radio (CJAI)</a></p>
           </div>
         </div>
         <div class="table-container" role="table" aria-label="Episode Archive">
-          <div class="flex-table header" role="rowgroup">
-            <div class="flex-row" role="columnheader">Ep</div>
-            <div class="flex-row" role="columnheader">Air Date</div>
-            <div class="flex-row" role="columnheader">Title</div>
-            <div class="flex-row" role="columnheader">Notes</div>
-            <div class="flex-row" role="columnheader">Featured Artists</div>
-            <div class="flex-row" role="columnheader">Listen</div>
-          </div>
-
           {{#each archiveEpisodes}}
           {{>archiveEpisode.hbs}}
           {{/each}}
-
         </div>
       </div>
     </div>
@@ -157,8 +148,6 @@
             <p>Space Station 23 would not be possible without these fine folk!</p>
           </div>
         </div>
-
-
 
         <div class="row">
 
@@ -299,11 +288,8 @@
                   <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
                 </p>
               </div>
-
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -318,7 +304,12 @@
           <div class="col-lg-4">
             <div class="mb-5">
               <h3 class="footer-heading mb-4">About Space Station 23</h3>
-              <p>@Greg can you write a one paragraph sales-y blurb for here?</p>
+              <p> Sure... it's true. I was born when Rock n Roll was born; But even better, we Boomers in particular,
+                have seen the
+                evolution of the greatest variety of popular music, and here in SpaceStation23 it is my mission to
+                celebrate and share
+                it all! </p>
+              <p style="text-align: right;">--Boo</p>
             </div>
 
             <div class="mb-5">
@@ -356,9 +347,12 @@
                 <h3 class="footer-heading mb-4">Follow Us</h3>
 
                 <div>
-                  <a href="https://www.facebook.com/ss23boo" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="https://twitter.com/ss23boo" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="https://instagram.com/ss23boo" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="https://www.facebook.com/ss23boo" class="pl-0 pr-3" title="SpaceStation23 on Facebook"><span
+                      class="icon-facebook"></span></a>
+                  <a href="https://twitter.com/ss23boo" class="pl-3 pr-3" title="SpaceStation23 on Twitter"><span
+                      class="icon-twitter"></span></a>
+                  <a href="https://instagram.com/ss23boo" class="pl-3 pr-3" title="SpaceStation23 on Instagram"><span
+                      class="icon-instagram"></span></a>
                 </div>
               </div>
             </div>
@@ -366,17 +360,6 @@
           </div>
 
           <div class="col-lg-4 mb-5 mb-lg-0">
-            {{!-- <div class="mb-5">
-              <h3 class="footer-heading mb-4">Watch Video</h3>
-
-              <div class="block-16">
-                <figure>
-                  <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid rounded">
-                  <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-button popup-vimeo"><span
-                      class="icon-play"></span></a>
-                </figure>
-              </div>
-            </div> --}}
 
             <div class="mb-5">
               <h3 class="footer-heading mb-2">Amherst Island Radio</h3>
@@ -423,6 +406,59 @@
       </div>
     </footer>
   </div>
+  <template id="audioPlayerTemplate">
+    <div class="styled-player">
+      <span class="ap-offscreen">Audio Player</span>
+      <div id="mep_{{episode}}" class="ap-container ap-audio" tabindex="0" role="application" aria-label="Audio Player"
+        style=" height: 40px; ">
+        <div class="ap-inner">
+  
+          <div class="ap-controls" data-episode="{{episode}}">
+            <div class="ap-button ap-playpause-button ap-play">
+              <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0"></button>
+            </div>
+            <div class="ap-time ap-currenttime-container" role="timer" aria-live="off">
+              <span class="ap-currenttime">00:00:00</span>
+            </div>
+  
+            <div class="ap-time-rail">
+              <span class="ap-time-total ap-time-slider" role="slider" tabindex="0" aria-label="Time Slider"
+                aria-valuemin="0" aria-valuemax="NaN" aria-valuenow="0" aria-valuetext="00:00">
+                <span class="ap-time-buffering" style="display: none;"></span>
+                <span class="ap-time-loaded"></span>
+                <span class="ap-time-current"></span>
+                <span class="ap-time-hovered no-hover"></span>
+                {{!-- <span class="ap-time-handle" style="transform: translateX(53px);">
+                  <span class="ap-time-handle-content"></span>
+                </span> --}}
+                <span class="ap-time-float" style="display: none; left: 0px;">
+                  <span class="ap-time-float-current">00:00:00</span>
+                  <span class="ap-time-float-corner"></span>
+                </span>
+              </span>
+            </div>
+  
+            <div class="ap-time ap-duration-container">
+              <span class="ap-duration"></span>
+            </div>
+  
+            <div class="ap-button ap-volume-button ap-mute">
+              <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button>
+            </div>
+  
+            <a class="ap-horizontal-volume-slider" href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0"
+              aria-valuemax="100" role="slider">
+              <span class="ap-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
+              <div class="ap-horizontal-volume-total">
+                <div class="ap-horizontal-volume-current" style="left: 0px; width: 100%;"></div>
+                <div class="ap-horizontal-volume-handle" style="left: 100%;"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
   <script src="main.js"></script>
 </body>
 

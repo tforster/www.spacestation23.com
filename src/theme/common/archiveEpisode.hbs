@@ -1,22 +1,17 @@
 <div class="flex-table" role="rowgroup">
-  <div class="flex-row" role="cell">{{episode}}</div>
-  <div class="flex-row" role="cell">{{airDate}}</div>
-  <div class="flex-row" role="cell">{{title}}</div>
-  <div class="flex-row" role="cell">{{description}}</div>
-  <div class="flex-row" role="cell">{{featuredArtists}}</div>
-  <div class="flex-row" role="cell"><a href="{{url}}">
-      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px">
-        <path
-          d="M52,92.77h.61a15.52,15.52,0,0,0,15-11.48,22.87,22.87,0,0,1,2-5.27l.08-.14A30.26,30.26,0,0,1,80.8,64.82,31,31,0,1,0,39.62,20.5a2.5,2.5,0,0,0,4.12,2.83,25.71,25.71,0,0,1,19-11A25.93,25.93,0,0,1,78.25,60.52,35.26,35.26,0,0,0,65.36,73.45l-.08.14A27.71,27.71,0,0,0,62.77,80a10.55,10.55,0,0,1-10.63,7.78A10.75,10.75,0,0,1,42,77.61a2.5,2.5,0,1,0-5,.19A15.64,15.64,0,0,0,52,92.77Z" />
-        <path
-          d="M54.34,50,42.8,57a2.5,2.5,0,1,0,2.6,4.27l11.53-7a9.73,9.73,0,0,0-5.88-18,11.26,11.26,0,0,1,.69-1.87,15,15,0,0,1,12-8.54h.12A12.43,12.43,0,0,1,71.38,48.9c-8.34,4.94-13.92,11.34-16.59,19a2.5,2.5,0,1,0,4.72,1.64c2.3-6.64,7-12,14.41-16.37A17.44,17.44,0,0,0,63.47,20.8h-.15A20,20,0,0,0,47.23,32.19a16.31,16.31,0,0,0-1.56,7.63,2.51,2.51,0,0,0,3.8,2A4.73,4.73,0,1,1,54.34,50Z" />
-        <path
-          d="M4.73,58.46a2.5,2.5,0,0,0,3.53-.12,12.24,12.24,0,0,0,0-16.69,2.5,2.5,0,0,0-3.65,3.42,7.23,7.23,0,0,1,0,9.85A2.5,2.5,0,0,0,4.73,58.46Z" />
-        <path
-          d="M16,65.61a2.5,2.5,0,0,0,3.5-.5,25.28,25.28,0,0,0,0-30.23,2.5,2.5,0,1,0-4,3,20.25,20.25,0,0,1,0,24.22A2.5,2.5,0,0,0,16,65.61Z" />
-        <path
-          d="M27,72.59a2.5,2.5,0,0,0,3.49-.6,38.16,38.16,0,0,0,0-44,2.5,2.5,0,0,0-4.08,2.89,33.15,33.15,0,0,1,0,38.21A2.5,2.5,0,0,0,27,72.59Z" />
-      </svg>
-    </a>
-    </div>
+  <div class="flex-row" role="cell">
+    <div class="image" style="background-image: url('images/albums/{{thumbnail}}');"></div>
+  </div>
+  <div class="flex-row" role="cell">
+    <h3 class="font-weight-light">{{episode}}: {{title}}</h3>
+    <p>{{description}}</p>
+    <p>Featuring: {{featuredArtists}}</p>
+  
+  
+    <audio id="player-{{episode}}" class="native-player" preload="none" controls style="max-width: 100%"
+      data-length="{{runtime}}" src="{{url}}">
+    </audio>
+
+  </div>
+
 </div>

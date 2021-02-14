@@ -7,6 +7,61 @@
   "/robots.txt": {
     "modelName": "robots"
   },
+  "bios": [
+    {
+      "Boo Daley": {
+        "title": "Creative Director and Voice extraordinaire",
+        "thumbnail": "boo-daley.jpg",
+        "description": "Boo is not only the creator of SpaceStation23, he is also the voice behind many of the characters including Boo and Kale.",
+        "twitter": "https://twitter.com/ss23boo",
+        "facebook": "https://facebook.com/ss23boo",
+        "instagram": "https://instagram.com/ss23boo"
+      }
+    },
+    {
+      "Ed Finlan": {
+        "title": "The voice of Mayor Eddie on the show",
+        "thumbnail": "ed-finlan.jpg",
+        "description": "Ed and Boo have been friends since they were 5 years of age.",
+        "twitter": "https://twitter.com/ss23boo",
+        "facebook": "https://facebook.com/ss23boo",
+        "instagram": "https://instagram.com/ss23boo"
+      }
+    },
+    {
+      "John Farley": {
+        "title": "The voice of Randy Lentstupide on the show",
+        "thumbnail": "john-farley.jpg",
+        "description": "John discovered his appreciation for music when he played in the Kindergarden Rhythm Band. Today his best instrument is the radio.",
+        "twitter": "https://twitter.com/ss23boo",
+        "facebook": "https://facebook.com/ss23boo",
+        "instagram": "https://instagram.com/ss23boo"
+      }
+    },
+    {
+      "Troy Forster": {
+        "title": "Consulting Technology Director and CTO for Hire",
+        "thumbnail": "troy-forster.jpg",
+        "description": "",
+        "twitter": "https://twitter.com/tforster",
+        "facebook": "https://facebook.com/troy.forster.374",
+        "instagram": "https://instagram.com/tforster"
+      }
+    },
+    {
+      "Eric Tremblay": {
+        "title": "Station Manager, Amherst Island Radio",
+        "thumbnail": "cjai.jpg",
+        "description": "CJAI-FM, known on air as Amherst Island Radio, is kind enough to provide weekly airtime for the transmission of SpaceStation23 into the ether. Please consider donating.",
+        "twitter": "https://twitter.com/ss23boo",
+        "facebook": "https://facebook.com/ss23boo",
+        "instagram": "https://instagram.com/ss23boo"
+      }
+    },
+    {
+      "Boo Daley": {}
+    },
+  ],
   "podcastSources": [
     {
       "title": "RSS",
@@ -28,7 +83,6 @@
       "src": "iheart-radio.png",
       "href": "https://www.iheart.com/"
     }
-
   ],
   "feed": {
     "title": "Space Station 23",
@@ -77,7 +131,7 @@
         "title": "The Mayor of Eddyburgh",
         "description": "Tribute to Little Richard and introduction of the owner of the Space Station complex, Mayor Eddy",
         "featuredArtists": "Jonathan Edwards, Playing for Change, Leon Russell, The Beatles, Little Richard",
-        "thumbnail": "little-richard",
+        "thumbnail": "little-richard.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep2.mp3"
       },
       {
@@ -125,7 +179,7 @@
         "title": "Truly Classical",
         "description": "A gentle introduction to Classical music, from popular movie themes to the legends!",
         "featuredArtists": "John Williams, Ennio Morricone, Mozart, Debussy, John Horner, Rossini",
-        "thumbnail": "../images/albums/country.jpg",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep6.mp3"
       },
       {
@@ -137,7 +191,7 @@
         "title": "Hothouse Mix!",
         "description": "Sweating it out in the Space Station, and jammin' under the stars!",
         "featuredArtists": "Thomas Dolby, Beach Boys, Arcade Fire, Free, Doobie Brothers,",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep7.mp3"
       },
       {
@@ -149,7 +203,7 @@
         "title": "Random picks",
         "description": "A whale of a story from Bill Gaffigan and more great tunes plucked from the ether!",
         "featuredArtists": "Bill Gaffigan, Prince, Buckingham-Nicks, Led Zeppelin, Procol Harum",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep8.mp3"
       },
       {
@@ -161,7 +215,7 @@
         "title": "Harmony!",
         "description": "Voices better in numbers...",
         "featuredArtists": "Elton John, The Beatles, Doc Walker, Little River Band, Temptations, O'Jays, Voces8, Eagles",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep9.mp3"
       },
       {
@@ -173,7 +227,7 @@
         "title": "Guests in SS23",
         "description": "More music sharing, including an in station performance and a gathering of the Advisory Council",
         "featuredArtists": "Bruce Cockburn, Heart, Commodors, Alison Kraus & Union Station, John Brine",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep10.mp3"
       },
       {
@@ -185,7 +239,7 @@
         "title": "Symphonic Rock!",
         "description": "Orchestras and rock, a match made in heaven!",
         "featuredArtists": "ELO, The Beatles, Queen, Elton John, Judy Tzuke, Blue Jays",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep11.mp3"
       },
       {
@@ -197,7 +251,7 @@
         "title": "Miss Alaneuss",
         "description": "I my capacity as your Captain in the Space Station, I offer another episode of fine random tunes!",
         "featuredArtists": "Tedeschi Trucks Band, Carly Simon, Van Morrison, Ricky Skaggs, Steve Earle Supertramp",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep12.mp3"
       },
       {
@@ -209,7 +263,7 @@
         "title": "Autumn comin'",
         "description": "Introducing the Omnisentient \"Noodle\" from Space Station 9, Crickets and leaves of Autumn, and Carl Sagan's Pale Blue Dot",
         "featuredArtists": "Rodney Dangerfield, Annie Lennox, Leon Russell, Jesse Cook, Justin Hayward, Carl Sagan, Cassandra Vasic",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep13.mp3"
       },
       {
@@ -221,7 +275,7 @@
         "title": "Another SS23 Mix",
         "description": "In this episode... boats, monsters, sons, souls and a classic from The Band",
         "featuredArtists": "The Pogues, Cat Stevens, David Bowie, Aimee Mann, Eric Carmen, Collective Soul, Playing for Change",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep14.mp3"
       },
       {
@@ -233,7 +287,7 @@
         "title": "Countrified!",
         "description": "A great mix of classic country and new artists, including some 2020 CCMA nominees.",
         "featuredArtists": "Washboard Union, Big n Rich, Dierks Bentley and Friends, TRIO, Merle Haggard, Red Sovine, Eric Church, Tenille Townes",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep15.mp3"
       },
       {
@@ -245,7 +299,7 @@
         "title": "E G B D F",
         "description": "The Moody Blues classic 1971 album, Every Good Boy Deserves Favour in it's entirety!",
         "featuredArtists": "Moody Blues",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep16.mp3"
       },
       {
@@ -257,7 +311,7 @@
         "title": "John Lennon Tribute",
         "description": "On the very day that John Lennon would have celebrated his 80th birthday, SS23 offers a dozen of his best songs.",
         "featuredArtists": "John Lennon",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep17.mp3"
       },
       {
@@ -269,7 +323,7 @@
         "title": "The Eddysburgh Address",
         "description": "As is our custom, a good variety of new and classic tunes, PLUS, the Mayor of Eddyburgh speaks!",
         "featuredArtists": "The Wallflowers, Billie Eilish, Fleetwood Mac, John Bonomassa, Anne Wilson",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep18.mp3"
       },
       {
@@ -281,7 +335,7 @@
         "title": "Devil's Night!",
         "description": "A spook story, Springsteens Ghosts and more...",
         "featuredArtists": "Bruce Springsteen, Kathleen Edwards, Daniel Lanois, Van Morrison w/ Ray Charles, Led Zeppelin",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep19.mp3"
       },
       {
@@ -293,7 +347,7 @@
         "title": "SS23 Stew",
         "description": "A veritable Tune Soup, featuring some new inductees in the Rock and Roll Hall of Fame, and a gathering of the Advisory Council",
         "featuredArtists": "Hothouse Flowers, Doobie Brothers, Marc Bolan and T - Rex, Arkels, Roxy Music",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep20.mp3"
       },
       {
@@ -305,7 +359,7 @@
         "title": "Some JAZZ...",
         "description": "Here's a soft intro to the world of Jazz music in it's myriad forms. Have a listen more than once...it can grow on ya...",
         "featuredArtists": "Dizzy Gillespie, Chris Botti, Oscar Peterson, Cassandra Wilson, Irskin Hawkins, Joni Mitchell, The Richard Carpenter Trio",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep21.mp3"
       },
       {
@@ -317,7 +371,7 @@
         "title": "Humor me...",
         "description": "Some classic comedy bits, AND the Mayor shares some jokes...sort of.",
         "featuredArtists": "Bill Murray, Foster Brooks, Jerry Seinfeld, Laura Elliot, Monte Python, Mayor Eddy, George Carlin, SCTV, Jeff Foxworthy",
-        "thumbnail": "",
+        "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep22.mp3"
       },
       {
@@ -373,7 +427,7 @@
         "episode": 27,
         "version": "",
         "airDate": "2021-01-15",
-        "runtime": "00:32:40",
+        "runtime": 1960,
         "title": "Hindsight is 2020!",
         "description": "Select songs from some of the #1 Albums of 2020",
         "featuredArtists": "Machine Gun Kelly, Shawn Mendes, Kenny Chesney, Taylor Swift, The Weeknd, Ariana Grande, Paul McCartney",
@@ -385,7 +439,7 @@
         "episode": 28,
         "version": "",
         "airDate": "2021-01-22",
-        "runtime": "00:34:00",
+        "runtime": 2040,
         "title": "Colours-Red White and Blue",
         "description": "Some great songs that fell through the cracks and a theme of reconciliation",
         "featuredArtists": "Bruce Cockurn, Bill Maher, Black Pumas, Billy Joel, Arc Angels, The Hollies, New Parachute Collective",
@@ -397,7 +451,7 @@
         "episode": 29,
         "version": "",
         "airDate": "2021-02-05",
-        "runtime": "00:36:15",
+        "runtime": 2175,
         "title": "Eddyburgh Stew",
         "description": "Introducing Randy Lentstupide; A special Black History Month salute with Stevie Wonder",
         "featuredArtists": "Patty Smyth, Justin Townes Earle, Rupert Hine, Stevie Wonder",
@@ -409,7 +463,7 @@
         "episode": 30,
         "version": "",
         "airDate": "2021-02-12",
-        "runtime": "00:36:49",
+        "runtime": 2209,
         "title": "Hitsville- A tribute to Motown",
         "description": "With the passing of Supreme's legend, Mary Wilson, I had to reflect on the magnificent Black History that was MOTOWN",
         "featuredArtists": "Smokey Robinson and the Miracles, Martha and the Vandellas, The Supremes, Marvin Gaye, Four Tops, The Temptations, Gladys Knight and the Pips",
