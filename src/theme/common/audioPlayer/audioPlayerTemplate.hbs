@@ -1,0 +1,53 @@
+<template id="audioPlayerTemplate">
+  <div class="styled-player">
+    <span class="ap-offscreen">Audio Player</span>
+    <div id="ap-" class="ap-container ap-audio" tabindex="0" role="application" aria-label="Audio Player"
+      style=" height: 40px; ">
+      <div class="ap-inner">
+
+        <div class="ap-controls">
+          <div class="ap-button ap-playpause-button ap-play">
+            <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0"></button>
+          </div>
+          <div class="ap-time ap-currenttime-container" role="timer" aria-live="off">
+            <span class="ap-currenttime">00:00:00</span>
+          </div>
+
+          <div class="ap-time-rail">
+            <span class="ap-time-total ap-time-slider" role="slider" tabindex="0" aria-label="Time Slider"
+              aria-valuemin="0" aria-valuemax="NaN" aria-valuenow="0" aria-valuetext="00:00">
+              <span class="ap-time-buffering" style="display: none;"></span>
+              <span class="ap-time-loaded"></span>
+              <span class="ap-time-current"></span>
+              <span class="ap-time-hovered no-hover"></span>
+              {{!-- <span class="ap-time-handle" style="transform: translateX(53px);">
+                <span class="ap-time-handle-content"></span>
+              </span> --}}
+              <span class="ap-time-float" style="display: none; left: 0px;">
+                <span class="ap-time-float-current">00:00:00</span>
+                <span class="ap-time-float-corner"></span>
+              </span>
+            </span>
+          </div>
+
+          <div class="ap-time ap-duration-container">
+            <span class="ap-duration"></span>
+          </div>
+
+          <div class="ap-button ap-volume-button ap-mute">
+            <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button>
+          </div>
+
+          <a class="ap-horizontal-volume-slider" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100"
+            aria-valuenow="" role="slider">
+            <span class="ap-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
+            <div class="ap-horizontal-volume-total">
+              <div class="ap-horizontal-volume-current" style="left: 0px; width: 100%;"></div>
+              <div class="ap-horizontal-volume-handle" style="left: 100%;"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,15 +1,29 @@
+/**
+ * Main class implementing the bulk of the optional JavaScript logic for Space Station 23
+ * - Note: Most site features including audio and desktop navigation will work without JavaScript. Desktop navigation highlighting
+ *   and overall mobile navigation require JavaScript still.
+ *
+ * @class SpaceStation23
+ */
 class SpaceStation23 {
+  /**
+   * Creates an instance of SpaceStation23.
+   * @memberof SpaceStation23
+   */
   constructor() {
     this.bindAudioPlayers();
-
     this.bindNavigationBits();
 
+    // Cache the coordinates of the four navigable sections
     this.menus = {
       hero: 0,
       "latest-episodes": this.getCoords(document.querySelector("#latest-episodes")).top,
       subscribe: this.getCoords(document.querySelector("#subscribe")).top,
       archives: this.getCoords(document.querySelector("#archives")).top,
+      credits: this.getCoords(document.querySelector("#credits")).top,
     };
+
+    // Highlight the current navigated section. Note: will account for deep links to #{some-section}.
     this.currentNav = document.querySelector(".nav-item.active .nav-link");
   }
 
@@ -21,6 +35,14 @@ class SpaceStation23 {
     });
   }
 
+  /**
+   * Generic debounce function
+   *
+   * @param {function} fn:  The function to debounce
+   * @param {number} wait:  The number of milliseconds to debounce by
+   * @returns {function}:   The called function after accounting for debounce time
+   * @memberof SpaceStation23
+   */
   debounce(fn, wait) {
     let t;
     return function () {
@@ -29,9 +51,15 @@ class SpaceStation23 {
     };
   }
 
-  getCoords(elem) {
-    // crossbrowser version
-    var box = elem.getBoundingClientRect();
+  /**
+   * Returns the normalised top left position of the element relative to the document
+   *
+   * @param {node} el:  The DOM element to check
+   * @returns {object}: The top left position of the element in the form {top:n, left:n}
+   * @memberof SpaceStation23
+   */
+  getCoords(el) {
+    var box = el.getBoundingClientRect();
 
     var body = document.body;
     var docEl = document.documentElement;

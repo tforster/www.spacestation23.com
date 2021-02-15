@@ -17,9 +17,9 @@
   <link rel="icon" href="/images/logo.jpg" type="image/jpg">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900">
-  <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" href="mediaelementplayer.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Goldman">
+  {{!--
+  <link rel="stylesheet" href="fonts/icomoon/style.css"> --}}
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -51,7 +51,7 @@
             <li class="nav-item"><a class="nav-link" href="#latest-episodes">Latest Episodes</a></li>
             <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
             <li class="nav-item"><a class="nav-link" href="#archives">The Archives</a></li>
-            <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#credits">Credits</a></li>
           </ul>
         </div>
       </div>
@@ -155,7 +155,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/boo-daley.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/boo-daley.jpg" alt="Boo Daley headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -177,7 +177,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/ed-finlan.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/ed-finlan.jpg" alt="Ed Finlan headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -202,7 +202,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/john-farley.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/john-farley.jpg" alt="John Farley headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -225,7 +225,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/troy-forster.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/troy-forster.jpg" alt="Troy Forster headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -249,7 +249,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/cjai.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/cjai.jpg" alt="Eric Tremblay headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -275,7 +275,7 @@
           <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
             <div class="team-member">
 
-              <img src="images/bios/person_6.jpg" alt="Image" class="img-fluid">
+              <img src="images/bios/person_6.jpg" alt="Person 6 headshot" width="350px" class="img-fluid">
 
               <div class="text">
 
@@ -332,13 +332,13 @@
                 <ul class="list-unstyled">
                   <li><a href="#hero">Home</a></li>
                   <li><a href="#latest-episodes">Latest Episodes</a></li>
-
+                  <li><a href="#subscribe">Subscribe</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
-                  <li><a href="#subscribe">Subscribe</a></li>
                   <li><a href="#archives">The Archives</a></li>
+                  <li><a href="#credits">Credits</a></li>
                 </ul>
               </div>
             </div>
@@ -363,16 +363,13 @@
 
             <div class="mb-5">
               <h3 class="footer-heading mb-2">Amherst Island Radio</h3>
-              <p>Space Station 23 can be found on <a href="https://tunein.com/radio/Amherst-Island-Radio-921-s91632/">CJAI 92.1
-                  FM</a> on Friday nights. Amherst Island Radio recently partnered with Kingston Online Services and the
-                Fleming Family to build a new 130′ free-standing telecommunications tower on the corner of the Stella 40
-                Foot and
-                the Third Concession on Amherst Island. It will bring much better Internet services to the island,
-                especially the
+              <p>Space Station 23 can be found on <a href="https://tunein.com/radio/Amherst-Island-Radio-921-s91632/">CJAI 92.1 FM</a>
+                on Friday nights.
+                Amherst Island Radio recently partnered with Kingston Online Services and the Fleming Family to build a
+                new 130′ free-standing telecommunications tower on the corner of the Stella 40 Foot and the Third
+                Concession on Amherst Island. It will bring much better Internet services to the island, especially the
                 South Shore! Please consider donating.</p>
-
             </div>
-
 
             <div class="mb-5">
               <h3 class="footer-heading mb-2">Newsletter</h3>
@@ -406,59 +403,7 @@
       </div>
     </footer>
   </div>
-  <template id="audioPlayerTemplate">
-    <div class="styled-player">
-      <span class="ap-offscreen">Audio Player</span>
-      <div id="mep_{{episode}}" class="ap-container ap-audio" tabindex="0" role="application" aria-label="Audio Player"
-        style=" height: 40px; ">
-        <div class="ap-inner">
-  
-          <div class="ap-controls" data-episode="{{episode}}">
-            <div class="ap-button ap-playpause-button ap-play">
-              <button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0"></button>
-            </div>
-            <div class="ap-time ap-currenttime-container" role="timer" aria-live="off">
-              <span class="ap-currenttime">00:00:00</span>
-            </div>
-  
-            <div class="ap-time-rail">
-              <span class="ap-time-total ap-time-slider" role="slider" tabindex="0" aria-label="Time Slider"
-                aria-valuemin="0" aria-valuemax="NaN" aria-valuenow="0" aria-valuetext="00:00">
-                <span class="ap-time-buffering" style="display: none;"></span>
-                <span class="ap-time-loaded"></span>
-                <span class="ap-time-current"></span>
-                <span class="ap-time-hovered no-hover"></span>
-                {{!-- <span class="ap-time-handle" style="transform: translateX(53px);">
-                  <span class="ap-time-handle-content"></span>
-                </span> --}}
-                <span class="ap-time-float" style="display: none; left: 0px;">
-                  <span class="ap-time-float-current">00:00:00</span>
-                  <span class="ap-time-float-corner"></span>
-                </span>
-              </span>
-            </div>
-  
-            <div class="ap-time ap-duration-container">
-              <span class="ap-duration"></span>
-            </div>
-  
-            <div class="ap-button ap-volume-button ap-mute">
-              <button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button>
-            </div>
-  
-            <a class="ap-horizontal-volume-slider" href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0"
-              aria-valuemax="100" role="slider">
-              <span class="ap-offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span>
-              <div class="ap-horizontal-volume-total">
-                <div class="ap-horizontal-volume-current" style="left: 0px; width: 100%;"></div>
-                <div class="ap-horizontal-volume-handle" style="left: 100%;"></div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
+  {{>audioPlayerTemplate.hbs}}
   <script src="main.js"></script>
 </body>
 
