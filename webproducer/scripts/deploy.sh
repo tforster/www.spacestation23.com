@@ -15,7 +15,7 @@ DEPLOY_TARGET=${1:-"dev"}
 # If deploying to Production
 if [ $DEPLOY_TARGET = "prod" ]; then
   if [ $STAGE = "prod" ]; then
-    cd webproducer && sls deploy --aws-profile spacestation23
+    cd webproducer && npx serverless deploy --aws-profile ss23
   else
     echo "STAGE environment variable mismatch. Confirm the STAGE variable in webproducer/.env is set to 'prod'."
   fi
@@ -23,7 +23,7 @@ if [ $DEPLOY_TARGET = "prod" ]; then
 # If deploying to Stage
 elif [ $DEPLOY_TARGET = "stage" ]; then
   if [ $STAGE = "stage" ]; then
-    cd webproducer && sls deploy --aws-profile spacestation23
+    cd webproducer && npx serverless deploy --aws-profile ss23
   else
     echo "STAGE environment variable mismatch. Confirm the STAGE variable in webproducer/.env is set to 'stage'."
   fi

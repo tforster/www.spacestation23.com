@@ -3,13 +3,9 @@
   <div class="text">
     <h3 class="font-weight-light"><a href="single-post.html">{{episode}}: {{title}}</a></h3>
     <p class="mb-4">{{description}}</p>
-    <div class="text-white mb-3">
-      <span class="text-black-opacity-05">
-        <small>{{airDate}}<span class="sep">/</span> {{runtime}}</small>
-      </span>
-    </div>
+    <p>Featuring: {{featuredArtists}}</p>
     <div class="player">
-      <audio id="player-{{episode}}" class="native-player" preload="none" controls style="max-width: 100%"
+      <audio id="player-latest{{episode}}" class="native-player" preload="none" controls style="max-width: 100%"
         data-length="{{runtime}}" src="{{url}}">
       </audio>
     </div>

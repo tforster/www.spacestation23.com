@@ -14,7 +14,7 @@ PUBLISH_TARGET=${1:-"dev"}
 # Publish to production
 if [ $PUBLISH_TARGET = "prod" ]; then
   if [ $STAGE = "prod" ]; then
-    curl "https://$DEPLOY_LAMBDA_ENDPOINT_PRODUCTION/$PUBLISH_TARGET/publish" --request POST
+    curl "https://xsyxjqq6n5.execute-api.ca-central-1.amazonaws.com/prod/publish" --request POST
   else
     echo "STAGE environment variable mismatch. Confirm the STAGE variable in webproducer/.env is set to 'prod'."
   fi
@@ -22,7 +22,7 @@ if [ $PUBLISH_TARGET = "prod" ]; then
 # Publish to stage
 elif [ $PUBLISH_TARGET = "stage" ]; then
   if [ $STAGE = "stage" ]; then
-    curl "https://$DEPLOY_LAMBDA_ENDPOINT_STAGE/$PUBLISH_TARGET/publish" --request POST
+    curl "https://n5p181uic4.execute-api.ca-central-1.amazonaws.com/stage/publish" --request POST
   else
     echo "STAGE environment variable mismatch. Confirm the STAGE variable in webproducer/.env is set to 'stage'."
   fi  
@@ -30,9 +30,9 @@ elif [ $PUBLISH_TARGET = "stage" ]; then
 # Publish locally
 elif [ $PUBLISH_TARGET = "dev" ]; then
   if [ $STAGE = "dev" ]; then
-    node webproducer/index
+    echo "ok"
   else
-    echo "STAGE environment variable mismatch. Confirm the STAGE variable in webproducer/.env is set to 'dev'."
+    echo "WARNING: STAGE environment variable mismatch."   
   fi  
-  
+  node webproducer/index
 fi

@@ -50,6 +50,13 @@ class AudioPlayer {
     this.player = template.content.firstElementChild.cloneNode(true);
     // Set the id
     this.player.querySelector("#ap-").id = `ap-${audioElement.id}`;
+
+    // Set the aria-controls
+    this.player.querySelector(".ap-playpause-button button").setAttribute("aria-controls", `ap-${audioElement.id}`);
+    this.player.querySelector(".ap-volume-button button").setAttribute("aria-controls", `ap-${audioElement.id}`);
+    this.player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuemax", audioElement.dataset["length"]);
+    this.player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuenow", 0);
+
     // Set the static duration time string after first formatting the number of seconds
     this.player.querySelector(".ap-duration").innerText = this.formatTime(audioElement.dataset["length"]);
     //
@@ -95,8 +102,10 @@ class AudioPlayer {
       e.preventDefault();
       // Get the horizontal click position as a value between 0 and 1
       const rect = e.currentTarget.getBoundingClientRect();
+      const volume = (e.clientX - rect.left) / rect.width;
       // Set the volume to the normalised horizontal position (e.g. 0=no volume and 1=max volume)
-      this.audioElement.volume = (e.clientX - rect.left) / rect.width;
+      this.audioElement.volume = volume;
+      e.currentTarget.setAttribute("aria-valuenow", volume * 100);
     });
 
     // Mute
@@ -150,9 +159,13 @@ class AudioPlayer {
       player.querySelector(".ap-time-slider .ap-time-current").style.transform = `scaleX(${progress})`;
 
       // Update the volume bar
-
       player.querySelector(".ap-horizontal-volume-current").style.width = volume;
+
+      // Update aria values
       player.querySelector(".ap-horizontal-volume-current").setAttribute("aria-valuenow", volume);
+      console.log("elapsed", elapsed);
+      player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuenow", parseInt(elapsed));
+      player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuetext", this.formatTime(elapsed));
     });
   }
 }

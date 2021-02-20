@@ -2,8 +2,9 @@
 # WebProducer for Local and Serverless Building #
 #################################################
 templates: templates-fs
-destination: destination-${env:STAGE}
-data: ${env:BUILD_DATA}
+#destination: destination-${env:STAGE}
+destination: destination-dev
+data: data-fs
 
 ####################
 # Template Aliases #

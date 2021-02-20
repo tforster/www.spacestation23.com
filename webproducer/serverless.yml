@@ -1,5 +1,6 @@
 service: webProducer
 org: spacestation23
+useDotenv: true
 
 provider:
   name: aws  
@@ -48,7 +49,7 @@ functions:
 
 plugins:
   - serverless-offline
-  - serverless-dotenv-plugin
+
 
 package:
   include:

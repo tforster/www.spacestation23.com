@@ -64,6 +64,9 @@ class Transform {
     transformedData["/feed.xml"] = data.feed;
     this._feed(transformedData["/feed.xml"]);
 
+    // Robots file
+    transformedData["/robots.txt"] = { ...transformedData["/robots.txt"], ...{ prod: process.env.STAGE === "prod" } };
+
     return transformedData;
   }
 
