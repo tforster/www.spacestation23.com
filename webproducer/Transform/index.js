@@ -108,7 +108,7 @@ class Transform {
    * - Note that we do hand construct some XML here. If the feed changes often and drastically we may want to consider adding an XML
    *   parser module to eliminate human hand-coding errors. But that will add a lot of weight in Kb.
    * - Can be validated with:
-   *  - https://validator.w3.org/feed/
+   *  - https://validator.w3.org/feed/check.cgi?url=https%3A%2F%2Fwww.stage.spacestation23.com%2Ffeed.xml
    *  - https://castfeedvalidator.com/
    *
    * @param {object} feed:  An object containing metadata describing both the feed and it's children (aka items)
@@ -152,11 +152,11 @@ class Transform {
     feed.items.forEach((item) => {
       item.explicit = item.explicit ? "yes" : "no";
 
-      if (feed.trackerPrefix) {
-        item.audio.url = `${feed.trackerPrefix}${item.url.replace("https://", "")}`;
-      }
+      // if (feed.trackerPrefix) {
+      //   item.audio.url = `${feed.trackerPrefix}${item.url.replace("https://", "")}`;
+      // }
       // TODO: Add support to transofrms via WebProducer for environments (dev, stage, prod) to variabalise properties like this.
-      //item.link = `https://www.rememberthispodcast.com${item.slug}`;
+      //item.link = `https://www.spacestation23.com${item.slug}`;
 
       // UTCString() is an iTunes required format
       item.pubDate = new Date(item.airDate).toUTCString();

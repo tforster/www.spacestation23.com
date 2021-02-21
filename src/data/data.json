@@ -84,14 +84,15 @@
   ],
   "feed": {
     "title": "Space Station 23",
-    "subtitle": "subtitle here",
-    "description": "description here",
+    "subtitle": "",
+    "description": "Sure... it is true. I was born when Rock n Roll was born; But even better, we Boomers in particular, have seen the evolution of the greatest variety of popular music, and here in SpaceStation23 it is my mission to celebrate and share it all!",
     "author": "Greg Hunter",
     "authorEmail": "gregory.hunter@live.ca",
     "image": {
       "url": "https://www.spacestation23.com/images/logo.jpg"
     },
-    "feedType": "",
+    "link": "https://www.spacestation23.com",
+    "feedType": "serial",
     "keywords": [],
     "categories": {
       "Music": [
@@ -118,7 +119,8 @@
         "description": "Introduction of primary characters and the story of how SpaceStation23 comes to be!",
         "featuredArtists": "Rare Earth, Dierks Bentley,J.J. Cale, Genesis",
         "thumbnail": "genesis.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep1b.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep1b.mp3",
+        "size": 41901915
       },
       {
         "explicit": false,
@@ -130,7 +132,8 @@
         "description": "Tribute to Little Richard and introduction of the owner of the Space Station complex, Mayor Eddy",
         "featuredArtists": "Jonathan Edwards, Playing for Change, Leon Russell, The Beatles, Little Richard",
         "thumbnail": "little-richard.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep2.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep2.mp3",
+        "size": 53807274
       },
       {
         "explicit": false,
@@ -142,7 +145,8 @@
         "description": "A healthy variety of music, including Mayor Eddy's request and the incomparable voice of Linda Ronstadt",
         "featuredArtists": "Bruce Springsteen, Hank Williams Jr. w/ Waylon Jennings, Joe Jackson, Linda Ronstadt, Hothouse Flowers",
         "thumbnail": "linda-ronstadt.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep3.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep3.mp3",
+        "size": 27897566
       },
       {
         "explicit": false,
@@ -154,7 +158,8 @@
         "description": "Summer tunes, and an unexpected call from a Soap character!",
         "featuredArtists": "Cream, Ridley Bent, Monte Python, Emmylou Harris, Sly and the Family Stone, Lovin' Spoonful",
         "thumbnail": "lovin-spoonful.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep4.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep4.mp3",
+        "size": 31461460
       },
       {
         "expt": false,
@@ -166,7 +171,8 @@
         "description": "Happy Canada Day! A celebration of a great diversity of Canadian artists.",
         "featuredArtists": "Edmonton Symphony Orchestra, Tragically Hip, Joni Mitchell, Rush, Sarah Harmer, Rankin Family, Neil Young, Gordon Lightfoot",
         "thumbnail": "gords-gold.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep5.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep5.mp3",
+        "size": 43682168
       },
       {
         "explicit": false,
@@ -178,7 +184,8 @@
         "description": "A gentle introduction to Classical music, from popular movie themes to the legends!",
         "featuredArtists": "John Williams, Ennio Morricone, Mozart, Debussy, John Horner, Rossini",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep6.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep6.mp3",
+        "size": 37195860
       },
       {
         "explicit": false,
@@ -190,7 +197,8 @@
         "description": "Sweating it out in the Space Station, and jammin' under the stars!",
         "featuredArtists": "Thomas Dolby, Beach Boys, Arcade Fire, Free, Doobie Brothers,",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep7.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep7.mp3",
+        "size": 27892088
       },
       {
         "explicit": false,
@@ -202,7 +210,8 @@
         "description": "A whale of a story from Bill Gaffigan and more great tunes plucked from the ether!",
         "featuredArtists": "Bill Gaffigan, Prince, Buckingham-Nicks, Led Zeppelin, Procol Harum",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep8.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep8.mp3",
+        "size": 28363546
       },
       {
         "explicit": false,
@@ -214,7 +223,8 @@
         "description": "Voices better in numbers...",
         "featuredArtists": "Elton John, The Beatles, Doc Walker, Little River Band, Temptations, O'Jays, Voces8, Eagles",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep9.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep9.mp3",
+        "size": 65397238
       },
       {
         "explicit": false,
@@ -226,7 +236,8 @@
         "description": "More music sharing, including an in station performance and a gathering of the Advisory Council",
         "featuredArtists": "Bruce Cockburn, Heart, Commodors, Alison Kraus & Union Station, John Brine",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep10.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep10.mp3",
+        "size": 28959138
       },
       {
         "explicit": false,
@@ -238,7 +249,8 @@
         "description": "Orchestras and rock, a match made in heaven!",
         "featuredArtists": "ELO, The Beatles, Queen, Elton John, Judy Tzuke, Blue Jays",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep11.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep11.mp3",
+        "size": 42707069
       },
       {
         "explicit": false,
@@ -250,7 +262,8 @@
         "description": "I my capacity as your Captain in the Space Station, I offer another episode of fine random tunes!",
         "featuredArtists": "Tedeschi Trucks Band, Carly Simon, Van Morrison, Ricky Skaggs, Steve Earle Supertramp",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep12.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep12.mp3",
+        "size": 42058710
       },
       {
         "explicit": false,
@@ -262,7 +275,8 @@
         "description": "Introducing the Omniscient \"Noodle\" from Space Station 9, Crickets and leaves of Autumn, and Carl Sagan's Pale Blue Dot",
         "featuredArtists": "Rodney Dangerfield, Annie Lennox, Leon Russell, Jesse Cook, Justin Hayward, Carl Sagan, Cassandra Vasic",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep13.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep13.mp3",
+        "size": 32811468
       },
       {
         "explicit": false,
@@ -274,7 +288,8 @@
         "description": "In this episode... boats, monsters, sons, souls and a classic from The Band",
         "featuredArtists": "The Pogues, Cat Stevens, David Bowie, Aimee Mann, Eric Carmen, Collective Soul, Playing for Change",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep14.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep14.mp3",
+        "size": 64067291
       },
       {
         "explicit": false,
@@ -286,7 +301,8 @@
         "description": "A great mix of classic country and new artists, including some 2020 CCMA nominees.",
         "featuredArtists": "Washboard Union, Big n Rich, Dierks Bentley and Friends, TRIO, Merle Haggard, Red Sovine, Eric Church, Tenille Townes",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep15.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep15.mp3",
+        "size": 52568506
       },
       {
         "explicit": false,
@@ -298,7 +314,8 @@
         "description": "The Moody Blues classic 1971 album, Every Good Boy Deserves Favour in it's entirety!",
         "featuredArtists": "Moody Blues",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep16.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep16.mp3",
+        "size": 62483226
       },
       {
         "explicit": false,
@@ -310,7 +327,8 @@
         "description": "On the very day that John Lennon would have celebrated his 80th birthday, SS23 offers a dozen of his best songs.",
         "featuredArtists": "John Lennon",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep17.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep17.mp3",
+        "size": 64698828
       },
       {
         "explicit": false,
@@ -322,7 +340,8 @@
         "description": "As is our custom, a good variety of new and classic tunes, PLUS, the Mayor of Eddyburgh speaks!",
         "featuredArtists": "The Wallflowers, Billie Eilish, Fleetwood Mac, John Bonomassa, Anne Wilson",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep18.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep18.mp3",
+        "size": 32120581
       },
       {
         "explicit": false,
@@ -334,7 +353,8 @@
         "description": "A spook story, Springsteens Ghosts and more...",
         "featuredArtists": "Bruce Springsteen, Kathleen Edwards, Daniel Lanois, Van Morrison w/ Ray Charles, Led Zeppelin",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep19.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep19.mp3",
+        "size": 32423602
       },
       {
         "explicit": false,
@@ -346,7 +366,8 @@
         "description": "A veritable Tune Soup, featuring some new inductees in the Rock and Roll Hall of Fame, and a gathering of the Advisory Council",
         "featuredArtists": "Hothouse Flowers, Doobie Brothers, Marc Bolan and T - Rex, Arkels, Roxy Music",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep20.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep20.mp3",
+        "size": 35123618
       },
       {
         "explicit": false,
@@ -358,7 +379,8 @@
         "description": "Here's a soft intro to the world of Jazz music in it's myriad forms. Have a listen more than once...it can grow on ya...",
         "featuredArtists": "Dizzy Gillespie, Chris Botti, Oscar Peterson, Cassandra Wilson, Irskin Hawkins, Joni Mitchell, The Richard Carpenter Trio",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep21.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep21.mp3",
+        "size": 36751987
       },
       {
         "explicit": false,
@@ -370,7 +392,8 @@
         "description": "Some classic comedy bits, AND the Mayor shares some jokes...sort of.",
         "featuredArtists": "Bill Murray, Foster Brooks, Jerry Seinfeld, Laura Elliot, Monte Python, Mayor Eddy, George Carlin, SCTV, Jeff Foxworthy",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep22.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep22.mp3",
+        "size": 11578384
       },
       {
         "explicit": false,
@@ -382,7 +405,8 @@
         "description": "In this, another episode of music sharing, we feature a couple of current Canadian artists and some classics including a 50 year gem from George Harrison",
         "featuredArtists": "Dream Academy, Playing for Change, Joe Walsh, J.J. Wilde, The Glorious Sons, George Harrison",
         "thumbnail": "george-harrison.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep23.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep23.mp3",
+        "size": 28428330
       },
       {
         "explicit": false,
@@ -394,7 +418,8 @@
         "description": "From the Boo Daley mix tape of yuletide favourites...enjoy!",
         "featuredArtists": "The Beatles, Rita MacNeil, Emmylou Harris, Greg Lake, Sabrina Claudio, Ray Charles, Libera, John Denver, Faith Hill, John Mellencamp, The Carpenters, Kenny and Dolly, Chris Botti",
         "thumbnail": "faith-hill.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep24v2.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep24v2.mp3",
+        "size": 99648993
       },
       {
         "explicit": false,
@@ -406,7 +431,8 @@
         "description": "From the Boo Daley mix tape of yuletide favourites...enjoy!",
         "featuredArtists": "The Stanley Bros, Tchaikovsky, Barbara Streisand, Shaggy, Alison Kraus and Alan Jackson, Pavoroti, Eagles, Eurythmics, The Canadian Brass, Bing and Bowie, Rascal Flatts, Bruce Springsteen, Nat King Cole, The Gatlin Bros.",
         "thumbnail": "the-nutcracker.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep25xmasB.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep25xmasB.mp3",
+        "size": 12942268
       },
       {
         "explicit": false,
@@ -418,7 +444,8 @@
         "description": "Episode 26 is a tribute to the many country artists we lost in 2020, 3 to the Corona virus, plus a sentimental favourite for the New Year",
         "featuredArtists": "The Charlie Daniels Band, Hal Ketchum, John Prine, Joe Diffie, Charley Pride, Kenny Rogers, Dan Fogelberg",
         "thumbnail": "charley-pride.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep26.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep26.mp3",
+        "size": 32543138
       },
       {
         "explicit": false,
@@ -430,7 +457,8 @@
         "description": "Select songs from some of the #1 Albums of 2020",
         "featuredArtists": "Machine Gun Kelly, Shawn Mendes, Kenny Chesney, Taylor Swift, The Weeknd, Ariana Grande, Paul McCartney",
         "thumbnail": "taylor-swift.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep27.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep27.mp3",
+        "size": 31367419
       },
       {
         "explicit": false,
@@ -442,7 +470,8 @@
         "description": "Some great songs that fell through the cracks and a theme of reconciliation",
         "featuredArtists": "Bruce Cockurn, Bill Maher, Black Pumas, Billy Joel, Arc Angels, The Hollies, New Parachute Collective",
         "thumbnail": "arc-angels.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep28B.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep28B.mp3",
+        "size": 33333122
       },
       {
         "explicit": false,
@@ -454,7 +483,8 @@
         "description": "Introducing Randy Lentstupide; A special Black History Month salute with Stevie Wonder",
         "featuredArtists": "Patty Smyth, Justin Townes Earle, Rupert Hine, Stevie Wonder",
         "thumbnail": "songs-in-the-key-of-life.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep29.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep29.mp3",
+        "size": 34808895
       },
       {
         "explicit": false,
@@ -466,7 +496,8 @@
         "description": "With the passing of Supreme's legend, Mary Wilson, I had to reflect on the magnificent Black History that was MOTOWN",
         "featuredArtists": "Smokey Robinson and the Miracles, Martha and the Vandellas, The Supremes, Marvin Gaye, Four Tops, The Temptations, Gladys Knight and the Pips",
         "thumbnail": "supremes.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep30.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep30.mp3",
+        "size": 35344718
       },
       {
         "explicit": false,
@@ -478,7 +509,8 @@
         "description": "The Advisory Council join in the announcement of the SpaceStation23 website with a replay of Episode 1",
         "featuredArtists": "J.J. Cale, Rare Earth, Dierks Bentley, Genesis, John Mayer",
         "thumbnail": "logo.jpg",
-        "url": "https://cjai.ca/podcast-main/SpaceStation23/index.php?dir=&file=SpaceStation23-Ep31.mp3"
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep31.mp3",
+        "size": 34032327
       }
     ]
   }

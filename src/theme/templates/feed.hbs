@@ -5,9 +5,9 @@
   version="2.0">
   <channel>
     <title>{{title}}</title>
-    <link>https://www.spacestation23.com</link>
+    <link>{{link}}</link>
     <language>en-ca</language>
-    <atom:link href="https://www.stage.spacestation23.com/feed.xml" rel="self" type="application/rss+xml">
+    <atom:link href="https://www.spacestation23.com/feed.xml" rel="self" type="application/rss+xml">
     </atom:link>
     <copyright>{{author}}</copyright>
     <itunes:subtitle>{{subtitle}}</itunes:subtitle>
@@ -26,23 +26,23 @@
     {{#each items}}
     <item>
       <title>{{title}}</title>
-      <link>{{link}}</link>
+      <link>{{../link}}</link>
       <itunes:title>{{title}}</itunes:title>
       <itunes:author>{{../author}}</itunes:author>
-      <itunes:subtitle>{{{name}}}</itunes:subtitle>
+      <itunes:subtitle>{{{description}}}</itunes:subtitle>
       <itunes:summary>
-        <![CDATA[{{{description}}}]]>
+        <![CDATA[{{{featuredArtists}}}]]>
       </itunes:summary>
       <description>
         <![CDATA[{{{description}}}]]>
       </description>
-      <itunes:image href="{{image.url}}"></itunes:image>
-      <enclosure url="{{audio.url}}" length="{{audio.size}}" type="{{audio.mimeType}}"></enclosure>
-      <itunes:duration>{{duration}}</itunes:duration>
-      <itunes:season>{{season}}</itunes:season>
+      <itunes:image href="{{../link}}/images/albums/{{thumbnail}}"></itunes:image>
+      <enclosure url="{{{url}}}" length="{{size}}" type="audio/mpeg"></enclosure>
+      <itunes:duration>{{runtime}}</itunes:duration>
+      <itunes:season>1</itunes:season>
       <itunes:episode>{{episode}}</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <guid isPermaLink="false">{{audio.url}}</guid>
+      <guid isPermaLink="false">{{{url}}}</guid>
       <pubDate>{{pubDate}}</pubDate>
       <itunes:explicit>{{explicit}}</itunes:explicit>
     </item>
