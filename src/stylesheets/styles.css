@@ -3,6 +3,21 @@
   font-family: 'Goldman', cursive;
   font-size: 2rem;
 }
+h3, h3 a {
+  color:#ad1005
+}
+.link {
+  text-decoration: underline
+}
+#archives .link {
+  color: #4d4d4d;
+}
+.site-footer .link {
+  color: #fff;
+}
+h3.latest-episode  {
+  color: #fff !important;
+}
 
 /* Recent Episodes */
 .podcast-entry .image {
@@ -108,7 +123,7 @@ h1 {
 }
 .navbar {
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
@@ -127,15 +142,16 @@ h1 {
 #hero {
   background-position: 8% center;
 }
+
 .navbar img {
   width: 40px;
 }
 .site-blocks-cover .player {
   bottom: -60px;
 }
-.btn-primary {
-  background-color: #eb1c0f;
-  border-color: #df1b0e;
+.btn-primary,.btn-primary:hover {
+  background-color: #000;
+  border-color: #000;
 }
 
 /* Player */
@@ -167,3 +183,17 @@ h1 {
 {
   color: #fff;
 }
+
+
+#btnListenNow {
+  background-color: #000;
+}
+
+
+
+default weight 300
+select/active 400
+h2 400
+class="text-white-opacity-05" = 100%
+hide albums on mobile
+show title colour  #ad1005

@@ -67,19 +67,9 @@
       "href": "https://www.spacestation23.com/feed.xml"
     },
     {
-      "title": "iTunes",
-      "src": "ios.svg",
-      "href": "https://podcasts.apple.com"
-    },
-    {
       "title": "Google",
       "src": "google.png",
-      "href": "https://podcasts.google.com/"
-    },
-    {
-      "title": "iHeart Radio",
-      "src": "iheart-radio.png",
-      "href": "https://www.iheart.com/"
+      "href": "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc3BhY2VzdGF0aW9uMjMuY29tL2ZlZWQueG1s"
     }
   ],
   "feed": {
@@ -511,6 +501,19 @@
         "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep31.mp3",
         "size": 34032327
+      },
+      {
+        "explicit": false,
+        "episode": 32,
+        "version": "",
+        "airDate": "2021-02-26",
+        "runtime": 2566,
+        "title": "ProgRock",
+        "description": "Reflecting on the early years of FM radio and the Progressive rock music that ruled the day...",
+        "featuredArtists": "Supertramp, Genesis, Emerson, Lake and Palmer, Frank Zappa,Jethro Tull, Rush, King Crimson",
+        "thumbnail": "in-the-court-of-the-crimson-king.jpeg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep32.mp3",
+        "size": 41051115
       }
     ]
   }
