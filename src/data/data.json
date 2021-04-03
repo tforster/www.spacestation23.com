@@ -13,7 +13,7 @@
       "Boo Daley": {
         "title": "Creative Director and Voice extraordinaire",
         "thumbnail": "boo-daley.jpg",
-        "description": "Boo is not only the creator of SpaceStation23, he is also the voice behind many of the characters including Boo and Kale.",
+        "description": "Boo is not only the creator of SpaceStation23, he is also the voice behind many of the characters including Boo and Cale.",
         "twitter": "https://twitter.com/ss23boo",
         "facebook": "https://facebook.com/ss23boo",
         "instagram": "https://instagram.com/ss23boo"
@@ -197,8 +197,8 @@
         "airDate": "2020-07-31",
         "runtime": 1772,
         "title": "Random picks",
-        "description": "A whale of a story from Bill Gaffigan and more great tunes plucked from the ether!",
-        "featuredArtists": "Bill Gaffigan, Prince, Buckingham-Nicks, Led Zeppelin, Procol Harum",
+        "description": "A whale of a story from Jim Gaffigan and more great tunes plucked from the ether!",
+        "featuredArtists": "Jim Gaffigan, Prince, Buckingham-Nicks, Led Zeppelin, Procol Harum",
         "thumbnail": "logo.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep8.mp3",
         "size": 28363546
@@ -514,6 +514,71 @@
         "thumbnail": "in-the-court-of-the-crimson-king.jpeg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep32.mp3",
         "size": 41051115
+      },
+      {
+        "explicit": false,
+        "episode": 33,
+        "version": "",
+        "airDate": "2021-03-05",
+        "runtime": 2457,
+        "title": "The Return of Mrs Miller!",
+        "description": "Special Guest, Chris Gaines and great song suggestions!",
+        "featuredArtists": "Coldplay, Ron Gallo, Crashing Wayward, Boz Scaggs, Mrs.Miller, Bunny Wailer",
+        "thumbnail": "blackheart-man.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep33.mp3",
+        "size": 39319928
+      },
+      {
+        "explicit": false,
+        "episode": 34,
+        "version": "",
+        "airDate": "2021-03-12",
+        "runtime": 1843,
+        "title": "Rewinding Episode 8",
+        "description": "Jim Gaffigan for laughs, great tunes for ears!",
+        "featuredArtists": "Jim Gaffigan, Prince, Buckingham-Nicks, Led Zeppelin, Procol Harem",
+        "thumbnail": "logo.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-EpEightB.mp3",
+        "size": 29488692
+      },
+      {
+        "explicit": false,
+        "episode": 35,
+        "version": "",
+        "airDate": "2021-03-19",
+        "runtime": 2168,
+        "title": "Grammy Jam!",
+        "description": "Skimming some of the winning and nominated tunes from the 63rd Grammy Awards!",
+        "featuredArtists": "John Prine, The Brothers Johnston,Welch and Rawlings, Fiona Apple, Thundercat, Silk Sonic, Billy Eilish",
+        "thumbnail": "grammy.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep35.mp3",
+        "size": 52048457
+      },
+      {
+        "explicit": false,
+        "episode": 36,
+        "version": "",
+        "airDate": "2021-03-26",
+        "runtime": 1918,
+        "title": "Promise of Spring!",
+        "description": "Music, poetry and promises, plus exciting news about Amherst Island Radio!",
+        "featuredArtists": "Vivaldi, The Rascals, Cat Stevens, Tom Petty, Amanda Marshall, Soundgarden, Steve Miller Band",
+        "thumbnail": "chicks.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep36.mp3",
+        "size": 46041757
+      },
+      {
+        "explicit": false,
+        "episode": 37,
+        "version": "",
+        "airDate": "2021-04-01",
+        "runtime": 2282,
+        "title": "Episode 12 Revisited",
+        "description": "A nod to William Shatner and Miss Alaneous tunes",
+        "featuredArtists": "Tedeschi Trucks Band, Carly Simon, Van Morrison, Ricky Skaggs, Steve Earle Supertramp",
+        "thumbnail": "kirk.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-EpEightB.mp3",
+        "size": 54991935
       }
     ]
   }

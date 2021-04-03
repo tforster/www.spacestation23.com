@@ -1,3 +1,9 @@
+
+/* Performance */
+.flex-table {
+  content-visibility: auto;
+}
+
 /* Typography */
 .navbar-brand {
   font-family: 'Goldman', cursive;

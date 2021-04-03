@@ -4,6 +4,7 @@ dist
 *.env
 *.pem
 *todo.md
+*:Zone.Identifier
 
 # Tools
 node_modules
