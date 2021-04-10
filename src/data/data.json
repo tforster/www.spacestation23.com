@@ -579,6 +579,19 @@
         "thumbnail": "kirk.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-EpEightB.mp3",
         "size": 54991935
+      },
+      {
+        "explicit": false,
+        "episode": 38,
+        "version": "",
+        "airDate": "2021-04-09",
+        "runtime": 1938,
+        "title": "Welcome to the Masters",
+        "description": "Boo's golf nightmare and another delicious musical goulash...",
+        "featuredArtists": " Sam Roberts Band, Charlotte Cardin, Beck, John Hiatt w/ Jerry Douglas Band, Ridley Bent",
+        "thumbnail": "golf.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep38.mp3",
+        "size": 46518857
       }
     ]
   }

@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/tforster/www.spacestation23.com/issues"
   },
-  "homepage": "https://github.com/tforster/www.spacestation23.com#readme"
+  "homepage": "https://github.com/tforster/www.spacestation23.com#readme",
+  "dependencies": {
+    "@tforster/webproducer": "github:tforster/webproducer#semver:v0.7.2-beta"
+  }
 }

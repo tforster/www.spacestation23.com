@@ -163,7 +163,6 @@ class AudioPlayer {
 
       // Update aria values
       player.querySelector(".ap-horizontal-volume-current").setAttribute("aria-valuenow", volume);
-      console.log("elapsed", elapsed);
       player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuenow", parseInt(elapsed));
       player.querySelector(".ap-time-total.ap-time-slider").setAttribute("aria-valuetext", this.formatTime(elapsed));
     });
