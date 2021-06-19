@@ -592,6 +592,71 @@
         "thumbnail": "golf.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep38.mp3",
         "size": 46518857
+      },
+      {
+        "explicit": false,
+        "episode": 39,
+        "version": "",
+        "airDate": "2021-04-23",
+        "runtime": 2203,
+        "title": "April Showers bring New Towers",
+        "description": "A rainshower reverie; the new Eddyburg vaccine; Info on the Amherst Island Radion FUND DRIVE!",
+        "featuredArtists": "Vern Gosdin,Christine MacVie, CCR, Bruce Hornsby, Gordon Lightfoot, Daniel Lanois, Bod Dylan",
+        "thumbnail": "cjai.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep39.mp3",
+        "size": 35245244
+      },
+      {
+        "explicit": false,
+        "episode": 40,
+        "version": "",
+        "airDate": "2021-05-07",
+        "runtime": 2441,
+        "title": "This is dedicated....",
+        "description": "Musical tributes and dedications!",
+        "featuredArtists": "The Mammas and the Pappas, Nancy Wilson, Motorhead, Elton John, U2, RnR Hall of Fame Band",
+        "thumbnail": "mamas-and-papas.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep40.mp3",
+        "size": 78140813
+      },
+      {
+        "explicit": false,
+        "episode": 41,
+        "version": "",
+        "airDate": "2021-05-21",
+        "runtime": 2792,
+        "title": "The world I know...",
+        "description": "The horrific world of 1891, an interview with Cathy Christmas and some blue-eyed-soul-vibes",
+        "featuredArtists": "Joss Stone, Collective Soul, Hall and Oates, Joe Cocker",
+        "thumbnail": "collective-soul.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep41.mp3",
+        "size": 67007216
+      },
+      {
+        "explicit": false,
+        "episode": 42,
+        "version": "",
+        "airDate": "2021-06-04",
+        "runtime": 2672,
+        "title": "F%#K Cancer!",
+        "description": "Dr. Christopher Pin guests to enlighten us to the strides we are making today to eliminate Cancer.",
+        "featuredArtists": "The Zolas, Deep Purple, Sheryl Crow, The Who, Emmylou Harris w/ Neil Young",
+        "thumbnail": "canadian-cancer-society.png",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep42.mp3",
+        "size": 64123925
+      },
+      {
+        "explicit": false,
+        "episode": 43,
+        "version": "",
+        "airDate": "2021-06-18",
+        "runtime": 2362,
+        "title": "The 215",
+        "description": "Juno review and facing the truth of our indigenous people!",
+        "featuredArtists": "JJ Wilde and Brett Emmons, The Tragically Hip w/ Feist, Healing Grounds, Crystal Shawanda, Paul McCartney and Wings",
+        "thumbnail": "healing-hand.png",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep43.mp3",
+        "size": 56689058
       }
     ]
   }
