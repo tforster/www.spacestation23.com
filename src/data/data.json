@@ -657,6 +657,45 @@
         "thumbnail": "healing-hand.png",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep43.mp3",
         "size": 56689058
+      },
+      {
+        "explicit": false,
+        "episode": 44,
+        "version": "",
+        "airDate": "2021-07-02",
+        "runtime": 3037,
+        "title": "Can-Jam 2021",
+        "description": "The now annual celebration of Canadian recording artists; Cue the Anthem!",
+        "featuredArtists": "The Guess Who, William Prince w/ Serena Ryder, Jann Arden.Stompin Tom, Barenaked Ladies, Sarah McLachlan, Crown Lands, Big Wreck, K.D. Lang, Blue Rodeo, Johnny Reid",
+        "thumbnail": "jann-arden.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep44.mp3",
+        "size": 72897306
+      },
+      {
+        "explicit": false,
+        "episode": 45,
+        "version": "",
+        "airDate": "2021-07-02",
+        "runtime": 2458,
+        "title": "Another Eddyburgh stew",
+        "description": "Plucking favourites from memory while I still have one....",
+        "featuredArtists": "The Animals, Bruce Springsteen, Kim Mitchell, Half Moon Run, Mary Chapin Carpenter, McCartney, Supertramp",
+        "thumbnail": "springsteen-innocent.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep45.mp3",
+        "size": 58995566
+      },
+      {
+        "explicit": false,
+        "episode": 46,
+        "version": "",
+        "airDate": "2021-07-30",
+        "runtime": 2750,
+        "title": "The Catty Meow!",
+        "description": "The Catty Meow Bar in Eddyburgh has finally reopened under new management, and the newly restored juke box is rockin' !",
+        "featuredArtists": "The Chamber Bros., The Rolling Stones, George Jones, Jefferson Airplane, Johnny Rivers, Gordon Lightfoot, Janis Joplin, ZZ Top, Lighthouse, Fairport Convention, Donovan, Michael Damian",
+        "thumbnail": "jukebox.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep46.mp3",
+        "size": 44921794
       }
     ]
   }
