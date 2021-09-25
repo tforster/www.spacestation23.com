@@ -696,6 +696,58 @@
         "thumbnail": "jukebox.jpg",
         "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep46.mp3",
         "size": 44921794
+      },
+      {
+        "explicit": false,
+        "episode": 47,
+        "version": "",
+        "airDate": "2021-08-13",
+        "runtime": 2288,
+        "title": "Output AND Input!",
+        "description": "Another full spectrum of SS23 artists, WITH some requests!",
+        "featuredArtists": "Johnny Cash, The Mathew Good Band,The Glorious Sons, George Harrison, The Killers, Norah Jones, White Cowbell Oklahoma, Bob Seger and the Silver Bullet Band",
+        "thumbnail": "johnny-cash.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep47.mp3",
+        "size": 54931749
+      },
+      {
+        "explicit": false,
+        "episode": 48,
+        "version": "",
+        "airDate": "2021-08-27",
+        "runtime": 1804,
+        "title": "THROW A STRIKE!",
+        "description": "Prayer for the Blue Jays, and some choice songs....",
+        "featuredArtists": "Ridley Bent, Nanci Griffith, The Rolling Stones, UNC Chorus Project, The Beaches, Elton John w/ Leon Russell",
+        "thumbnail": "nancy-griffith.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep48.mp3",
+        "size": 43308931
+      },
+      {
+        "explicit": false,
+        "episode": 49,
+        "version": "",
+        "airDate": "2021-09-09",
+        "runtime": 2385,
+        "title": "Meanwhile...back at the Catty Meow...",
+        "description": "Boo is back at the Catty Meow with a mitt full of Butt Coins!",
+        "featuredArtists": "Wild Cherry, Tommy James and the Shondells,The Troggs, Sly and the Family Stone, Conway Twitty, The Monkeys, The Staccatos, The Kinks, Led Zeppelin, Ian and Sylvia",
+        "thumbnail": "jukebox.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep49.mp3",
+        "size": 57258318
+      },
+      {
+        "explicit": false,
+        "episode": 50,
+        "version": "",
+        "airDate": "2021-09-24",
+        "runtime": 1929,
+        "title": "Episode 50!  Break out the candy!",
+        "description": "SS23's usual hoppin' variety of songs and salutes in this milestone 50th Episode",
+        "featuredArtists": "Booker T and the MG's, Elton John, Arkells, Chris Cornell, Hey Rosetta!, Playing For Change/Ripple, Norm MacDonald",
+        "thumbnail": "50th.jpg",
+        "url": "https://cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep50.mp3",
+        "size": 31523258
       }
     ]
   }
