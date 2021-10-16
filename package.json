@@ -15,7 +15,7 @@
   "scripts": {
     "init": "sh scripts/install.sh",
     "start": "node node_modules/http2-server --root dist --cert . --port 3704",
-    "publish": "export $(cat webproducer/.env | xargs) && sh webproducer/scripts/publish.sh",
+    "publish": "echo use joy wp deploy",
     "deploy": "export $(cat webproducer/.env | xargs) && sh webproducer/scripts/deploy.sh"
   },
   "repository": {
