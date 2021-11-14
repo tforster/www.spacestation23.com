@@ -744,6 +744,32 @@
         "title": "State of the Burg!",
         "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep51.mp3",
         "version": ""
+      },
+      {
+        "airDate": "2021-10-29",
+        "description": "Meandering selections which include local elements... John Brine returns!",
+        "episode": 52,
+        "explicit": false,
+        "featuredArtists": "The Trews, Steely Dan, Corb Lund, John Brine, Red Dirt Skinners, George Harrison",
+        "runtime": 1800,
+        "size": 27838589,
+        "thumbnail": "bear-with-us.jpg",
+        "title": "Pandemic Blues",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep52.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2021-11-12",
+        "description": "A show dedicated to the brilliance of Carol Kings landmark album, \"Tapestry\"",
+        "episode": 53,
+        "explicit": false,
+        "featuredArtists": "Carol King",
+        "runtime": 2976,
+        "size": 47623941,
+        "thumbnail": "carole-king.jpg",
+        "title": "Tapestry!",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep53.mp3",
+        "version": ""
       }
     ],
     "keywords": [],
