@@ -770,6 +770,32 @@
         "title": "Tapestry!",
         "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep53.mp3",
         "version": ""
+      },
+      {
+        "airDate": "2021-11-26",
+        "description": "All aboard! No breaking the supply chain of cool music in the Space Station!",
+        "episode": 54,
+        "explicit": false,
+        "featuredArtists": "The Offspring, The Gap Band, Chris Stapleton, Eric Clapton and J.J. Cale, Carl Sagan, Jeff Goldblum, The Beatles",
+        "runtime": 2266,
+        "size": 36252526,
+        "thumbnail": "gap-band.jpg",
+        "title": "Party Train",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep54.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2021-12-10",
+        "description": "A classic night of variety in the Catty Meow",
+        "episode": 55,
+        "explicit": false,
+        "featuredArtists": "Chilliwack, Tina Turner, The Kinks, Vern Gosdin, Rod Stewart, Ron Sexsmith, Ray Charles,The Tragically Hip, The Everly Brothers, Pat Benatar, Pagliaro, Gordon Lightfoot",
+        "runtime": 2737,
+        "size": 44703823,
+        "thumbnail": "jukebox.jpg",
+        "title": "A juke-box for the ages!",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep55.mp3",
+        "version": ""
       }
     ],
     "keywords": [],
