@@ -1,13 +1,4 @@
 {
-  "/index": {
-    "about": "Sure... it's true. I was born when Rock n Roll was born; But even better, we Boomers in particular, have seen the evolution of the greatest variety of popular music, and here in SpaceStation23 it is my mission to celebrate and share it all!",
-    "description": "The official site for Space Station 23",
-    "modelName": "home",
-    "title": "Space Station 23"
-  },
-  "/robots.txt": {
-    "modelName": "robots"
-  },
   "bios": [
     {
       "Boo Daley": {
@@ -796,6 +787,58 @@
         "title": "A juke-box for the ages!",
         "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep55.mp3",
         "version": ""
+      },
+      {
+        "airDate": "2021-12-31",
+        "description": "The Advisory Council reflects on the year past and we share the music of some of the artists who passed in '21",
+        "episode": 56,
+        "explicit": false,
+        "featuredArtists": "Moody Blues, Jay Black, Poco, Chick Corea, ELO, Les Emerson, Commander Cody and His Lost Planet Airmen",
+        "runtime": 3341,
+        "size": 54195760,
+        "thumbnail": "21-upside-down.jpg",
+        "title": "SO DONE with '21",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep56.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-01-14",
+        "description": "A special conversation with celebrated poet and author, Steven Heighten and music from his new album, \"The Devil's Share\"",
+        "episode": 57,
+        "explicit": false,
+        "featuredArtists": "Chris Squire, Blue Rodeo, The Weeknd, Steven Heighton, Johnny Winter, Vince Gill",
+        "runtime": 2680,
+        "size": 64315604,
+        "thumbnail": "steven-heighton-the-devils-share.jpg",
+        "title": "Steven Heighton!",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep57.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-02-11",
+        "description": "There are a lot of elements testing our mental health these days...but we can share stories and some bonifide compassion to get through it.. and music is a universal healer...",
+        "episode": 58,
+        "explicit": false,
+        "featuredArtists": "Paul McCartney, Skylark, Nathaniel Rateliff, Blue October, Shawn Mendez, Singers For Hope, Adele",
+        "runtime": 2133,
+        "size": 69286068,
+        "thumbnail": "mentalhealth.svg",
+        "title": "Let's Talk and listen....",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep58.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-02-25",
+        "description": "Game changers...",
+        "episode": 59,
+        "explicit": false,
+        "featuredArtists": "Bruce Cockburn, Jim Lowe, 10CC, Emmylou  Harris, Tom Petty, Moody Blues, Steven Tyler, Leon Russell and the Shelter People, Sarah Harmer, The Beatles",
+        "runtime": 2910,
+        "size": 93247668,
+        "thumbnail": "emmylou-harris-elite-hotel.jpg",
+        "title": "Choices...",
+        "url": "http://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep59.mp3",
+        "version": ""
       }
     ],
     "keywords": [],
@@ -815,5 +858,16 @@
       "src": "google.png",
       "title": "Google"
     }
-  ]
+  ],
+  "uris": {
+    "/index": {
+      "about": "Sure... it's true. I was born when Rock n Roll was born; But even better, we Boomers in particular, have seen the evolution of the greatest variety of popular music, and here in SpaceStation23 it is my mission to celebrate and share it all!",
+      "description": "The official site for Space Station 23",
+      "title": "Space Station 23",
+      "webProducerKey": "pages/home"
+    },
+    "/robots.txt": {
+      "webProducerKey": "pages/robots"
+    }
+  }
 }

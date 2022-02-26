@@ -21,7 +21,7 @@
     media="screen">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" media="screen">
   <link rel="preload" href="fonts/icomoon/icomoon.ttf?10si43" as="font" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.min.css" media="screen">
+  <link rel="stylesheet" href="main.css" media="screen">
 </head>
 
 <body>
@@ -95,7 +95,7 @@
         </div>
 
         {{#each latestEpisodes}}
-        {{>latestEpisode.hbs}}
+        {{>common/latestEpisode.hbs}}
         {{/each}}
 
       </div>
@@ -113,7 +113,7 @@
               soon).</p>
             <div class="podcast-sources">
               {{#each podcastSources}}
-              {{>podcastSource.hbs}}
+              {{>common/podcastSource.hbs}}
               {{/each}}
             </div>
 
@@ -135,7 +135,7 @@
         </div>
         <div class="table-container" role="table" aria-label="Episode Archive">
           {{#each archiveEpisodes}}
-          {{>archiveEpisode.hbs}}
+          {{>common/archiveEpisode.hbs}}
           {{/each}}
         </div>
       </div>
@@ -314,7 +314,7 @@
               <div class="block-25">
                 <ul class="list-unstyled">
                   {{#each latestEpisodes}}
-                  {{>latestEpisodeSmall.hbs}}
+                  {{>common/latestEpisodeSmall.hbs}}
                   {{/each}} </ul>
               </div>
             </div>
@@ -401,8 +401,8 @@
       </div>
     </footer>
   </div>
-  {{>audioPlayerTemplate.hbs}}
-  <script src="main.min.js"></script>
+  {{>common/audioPlayer/audioPlayerTemplate.hbs}}
+  <script src="main.js"></script>
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':

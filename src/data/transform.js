@@ -1,73 +1,86 @@
 "use strict";
-/* eslint-disable no-restricted-syntax */
 
-// Project dependencies
-const data = require("../../src/data/data.json");
+// System dependencies
+import { Transform } from "stream";
 
 /**
- * Transforms and reshapes data into an array of page data objects
- * - The Transform module is customised to the WebProducer instance and is loaded dynamically from the data/meta folder.
- * - The constructor is required to enable breakpoint debugging. Toggle using WebProducer.main(debugTransform).
- * - Custom transformation logic should be placed in transform()
- * - Helper methods and properties can be created if required
+ * Transforms and reshapes data into an array of page data objects.
+ * - This is custom to the specific implementation and just needs to implement this.transformStream to be WebProducer compliant.
+ * - All subsequent logic is the WP CLI, not the WebProducer engine
  *
- * @class Transform
+ * @class WPTransform
  */
-class Transform {
+class CLITransform {
   /**
-   * Creates an instance of Transform.
-   *
-   * @param {boolean} [debugTransform=false]: Set true to improve debugging experience
-   * @memberof Transform
+   * Creates an instance of WPTransform.
+   * @date 2022-02-06
+   * @memberof WPTransform
    */
-  constructor(debugTransform = false) {
-    if (debugTransform) {
-      // Set your breakpoints before resuming
-      debugger;
-    }
+  constructor() {
+    // Create an instance of a TransformableStream so that WPTransform can transform the incoming data stream
+    this.transformStream = new Transform({
+      id: "wpTransform",
+      objectMode: true,
+      transform: (file, _, done) => {
+        done(null, this.transform(file));
+      },
+    });
   }
 
   /**
    * transform
    * - The public entry point to this class that returns transformed output
    *
-   * @param {object} rawData: The raw data received from the data provider (e.g. GraphQL, REST, static JSON, etc)
-   * @returns {object}:       A dictionary of resources each referenced by it's unique key or URL
+   * @param {object} vinylFile: The Transformer works on a streamed Vinyl file from VinylFS, converted HTTP Response, etc
+   * @returns {object}:         The vinylFile with transformed .contents
    * @memberof Transform
    */
-  transform(rawData) {
-    const transformedData = rawData;
+  transform(vinylFile) {
+    // Extract the expected/required JSON contents
+    const transformedData = JSON.parse(vinylFile.contents.toString());
+    transformedData.pages = {};
 
-    const episodes = rawData.feed.items.sort((a, b) => (a["airDate"] < b["airDate"] ? 1 : -1));
+    // Do transformy stuff...
+
+    const episodes = transformedData.feed.items.sort((a, b) =>
+      a["airDate"] < b["airDate"] ? 1 : -1
+    );
     const latestEpisodes = episodes.slice(0, 3);
-    //const episodes = [];
-    // The CosmicJS specific query returns a series of "objects" under a parent called getBucket. Pivot into an array of slugs.
 
-    // rawData.getBucket.objects.forEach((obj) => {
-    //   if (obj.modelName != "episodes") {
-    //     transformedData[`/${obj.slug}`] = obj;
-    //   } else {
-    //     // Episodic data is found in getBucket.object[modelName=episodes]. Create an array the home page can use to render episodes.
-    //     //episodes.push(obj);
-    //   }
-    // });
+    const index = transformedData.uris["/index"];
 
     // Episodes
-    transformedData["/index"].latestEpisodes = latestEpisodes;
-    transformedData["/index"].latestEpisode = episodes[0];
-    transformedData["/index"].archiveEpisodes = episodes.sort((a, b) => (a["airDate"] > b["airDate"] ? 1 : -1));
+    index.latestEpisodes = latestEpisodes;
+    index.latestEpisode = episodes[0];
+    index.archiveEpisodes = episodes.sort((a, b) =>
+      a["airDate"] > b["airDate"] ? 1 : -1
+    );
 
     // Podcast Sources
-    transformedData["/index"].podcastSources = data.podcastSources;
+    index.podcastSources = transformedData.podcastSources;
+
+    transformedData.uris["/index"] = index;
 
     // RSS Feed
-    transformedData["/feed.xml"] = data.feed;
-    this._feed(transformedData["/feed.xml"]);
+    let feed = transformedData.uris["/feed.xml"];
+
+    feed = transformedData.feed;
+    // Apply some more feed-specific processing
+    this._feed(feed);
+
+    transformedData.uris["/feed.xml"] = feed;
 
     // Robots file
-    transformedData["/robots.txt"] = { ...transformedData["/robots.txt"], ...{ prod: process.env.STAGE === "prod" } };
+    transformedData.uris["/robots.txt"] = {
+      ...transformedData.uris["/robots.txt"],
+      ...{ prod: process.env.STAGE === "prod" },
+    };
 
-    return transformedData;
+    // Replace the original .contents with a restringified version of the new contents
+    vinylFile.contents = Buffer.from(JSON.stringify(transformedData), "utf-8");
+
+    // Return the updated Vinyl file
+    return vinylFile;
   }
 
   /**
@@ -115,7 +128,7 @@ class Transform {
    * @memberof Transform
    */
   _feed(feed) {
-    feed.modelName = "feed";
+    feed.webProducerKey = "pages/feed";
     // Sub categories have to be converted to nested xml itunes:category elements and look something like
     //
     // "categories": {
@@ -164,4 +177,9 @@ class Transform {
   }
 }
 
-module.exports = Transform;
+// Create a singleton instance of WPTransform
+const cliTransform = new CLITransform();
+
+// Return the transformStream so that it can be accessed in a WritableStream.pipe() call
+//module.exports = cliTransform.transformStream;
+export default cliTransform.transformStream;

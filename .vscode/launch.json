@@ -5,12 +5,23 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "npx webproducer",
+      "program": "/home/tforster/dev/TechSmarts/WebProducer/webproducer/scripts/cli/index.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "args": []
+    },
+    {
       "type": "pwa-node",
       "name": "publish",
       "request": "launch",
       "skipFiles": [
         "<node_internals>/**"
       ],
+      "runtimeVersion": "14",
       "runtimeArgs": [
         "--preserve-symlinks"
       ],

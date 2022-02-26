@@ -4,6 +4,7 @@
   "description": "The official website for Boo Daley's Space Station 23 Radio Programme.",
   "license": "MIT",
   "devDependencies": {
+    "@tforster/webproducer": "file:../../../TechSmarts/WebProducer/webproducer",
     "eslint": "^7.15.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-html": "^6.1.1",
@@ -36,7 +37,5 @@
     "url": "https://github.com/tforster/www.spacestation23.com/issues"
   },
   "homepage": "https://github.com/tforster/www.spacestation23.com#readme",
-  "dependencies": {
-    "@tforster/webproducer": "github:tforster/webproducer#semver:v0.7.2-beta"
-  }
+  "type": "module"
 }

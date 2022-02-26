@@ -1,3 +1,5 @@
+import { AudioPlayer } from "../theme/common/audioPlayer/AudioPlayer.js";
+
 /**
  * Main class implementing the bulk of the optional JavaScript logic for Space Station 23
  * - Note: Most site features including audio and desktop navigation will work without JavaScript. Desktop navigation highlighting
@@ -17,7 +19,9 @@ class SpaceStation23 {
     // Cache the coordinates of the four navigable sections
     this.menus = {
       hero: 0,
-      "latest-episodes": this.getCoords(document.querySelector("#latest-episodes")).top,
+      "latest-episodes": this.getCoords(
+        document.querySelector("#latest-episodes")
+      ).top,
       subscribe: this.getCoords(document.querySelector("#subscribe")).top,
       archives: this.getCoords(document.querySelector("#archives")).top,
       credits: this.getCoords(document.querySelector("#credits")).top,
@@ -86,15 +90,21 @@ class SpaceStation23 {
     document.querySelector("#btnListenNow").addEventListener("click", (e) => {
       // Don't prevent default because we want to scroll to the Latest Episodes
       // Click the styled player button so that we get styled player feedback. It will start the underlying HTML5 Audio.
-      document.querySelectorAll(".styled-player")[0].querySelector("button[title=Play]").click();
+      document
+        .querySelectorAll(".styled-player")[0]
+        .querySelector("button[title=Play]")
+        .click();
     });
 
     // Open the mobile nav on user tap
-    document.querySelector(".navbar-toggler[data-target='#main_nav']").addEventListener("click", (e) => {
-      e.preventDefault();
-      const mainNav = document.querySelector("#main_nav");
-      mainNav.style.display = mainNav.style.display === "block" ? "none" : "block";
-    });
+    document
+      .querySelector(".navbar-toggler[data-target='#main_nav']")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        const mainNav = document.querySelector("#main_nav");
+        mainNav.style.display =
+          mainNav.style.display === "block" ? "none" : "block";
+      });
 
     // Close the mobile nav following an item click
     document.querySelectorAll(".nav-link").forEach((nav) => {
