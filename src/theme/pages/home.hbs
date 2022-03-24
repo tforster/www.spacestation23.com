@@ -17,11 +17,591 @@
   <link rel="canonical" href="https://www.spacestation23.com" />
   <link rel="icon" href="/images/logo.jpg" type="image/jpg">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900&display=swap"
+  {{!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900&display=swap"
     media="screen">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" media="screen">
   <link rel="preload" href="fonts/icomoon/icomoon.ttf?10si43" as="font" crossorigin="anonymous" />
-  <link rel="stylesheet" href="main.css" media="screen">
+  <link rel="stylesheet" href="main.css" media="screen"> --}}
+<!-- Inline styles generated from cat dist/index| npx critical --base dist --inline > index.critical.html following https://web.dev/render-blocking-resources/ -->
+      <style>
+      @font-face {
+        font-family: Goldman;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/goldman/v13/pe0uMIWbN4JFplR2LDI.ttf)
+          format("truetype");
+      }
+      :root {
+        --blue: #007bff;
+        --indigo: #6610f2;
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --red: #dc3545;
+        --orange: #fd7e14;
+        --yellow: #ffc107;
+        --green: #28a745;
+        --teal: #20c997;
+        --cyan: #17a2b8;
+        --white: #fff;
+        --gray: #6c757d;
+        --gray-dark: #343a40;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --success: #28a745;
+        --info: #17a2b8;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --breakpoint-xs: 0;
+        --breakpoint-sm: 576px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1200px;
+        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: sans-serif;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+      }
+      @-ms-viewport {
+        width: device-width;
+      }
+      nav {
+        display: block;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+          Helvetica Neue, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+      }
+      h1,
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      p,
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      small {
+        font-size: 80%;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+      }
+      button {
+        border-radius: 0;
+      }
+      button {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      button {
+        overflow: visible;
+      }
+      button {
+        text-transform: none;
+      }
+      button,
+      html [type="button"] {
+        -webkit-appearance: button;
+      }
+      [type="button"]::-moz-focus-inner,
+      button::-moz-focus-inner {
+        padding: 0;
+        border-style: none;
+      }
+      h1,
+      h2 {
+        margin-bottom: 0.5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .display-4 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .small,
+      small {
+        font-size: 80%;
+        font-weight: 400;
+      }
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .col-md-8 {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @media (min-width: 768px) {
+        .col-md-8 {
+          -ms-flex: 0 0 66.666667%;
+          flex: 0 0 66.666667%;
+          max-width: 66.666667%;
+        }
+      }
+      .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        border-radius: 0.2rem;
+      }
+      .collapse:not(.show) {
+        display: none;
+      }
+      .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+      .navbar {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+      }
+      .navbar > .container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .navbar-brand {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+      }
+      .navbar-nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+      .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+      }
+      .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%;
+      }
+      @media (max-width: 991.98px) {
+        .navbar-expand-lg > .container {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .navbar-expand-lg {
+          -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+        }
+        .navbar-expand-lg .navbar-nav {
+          -ms-flex-direction: row;
+          flex-direction: row;
+        }
+        .navbar-expand-lg .navbar-nav .nav-link {
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+        }
+        .navbar-expand-lg > .container {
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+        }
+        .navbar-expand-lg .navbar-collapse {
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+        }
+        .navbar-expand-lg .navbar-toggler {
+          display: none;
+        }
+      }
+      .navbar-dark .navbar-brand {
+        color: #fff;
+      }
+      .navbar-dark .navbar-nav .nav-link {
+        color: #ffffff80;
+      }
+      .navbar-dark .navbar-nav .active > .nav-link {
+        color: #fff;
+      }
+      .navbar-dark .navbar-toggler {
+        color: #ffffff80;
+        border-color: #ffffff1a;
+      }
+      .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      .justify-content-center {
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+      }
+      .align-items-center {
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+      @supports ((position: -webkit-sticky) or (position: sticky)) {
+        .sticky-top {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+          z-index: 1020;
+        }
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem !important;
+      }
+      .mt-3 {
+        margin-top: 1rem !important;
+      }
+      .mb-4 {
+        margin-bottom: 1.5rem !important;
+      }
+      .py-3 {
+        padding-top: 1rem !important;
+      }
+      .py-3 {
+        padding-bottom: 1rem !important;
+      }
+      .px-4 {
+        padding-right: 1.5rem !important;
+      }
+      .px-4 {
+        padding-left: 1.5rem !important;
+      }
+      .ml-auto {
+        margin-left: auto !important;
+      }
+      .text-center {
+        text-align: center !important;
+      }
+      .font-weight-light {
+        font-weight: 300 !important;
+      }
+      .text-white {
+        color: #fff !important;
+      }
+      @font-face {
+        font-family: icomoon;
+        src: url(./icomoon-47AQO7ER.eot?10si43);
+        src: url(./icomoon-47AQO7ER.eot?10si43#iefix)
+            format("embedded-opentype"),
+          url(./icomoon-GKQBIQMD.ttf?10si43) format("truetype"),
+          url(./icomoon-LYISNGLY.woff?10si43) format("woff"),
+          url(./icomoon-T65ZMNTM.svg?10si43#icomoon) format("svg");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      [class^="icon-"] {
+        font-family: icomoon !important;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .icon-close2:before {
+        content: "\e5cd";
+      }
+      body {
+        line-height: 1.7;
+        color: #4d4d4d;
+        font-weight: 200;
+        font-size: 1.1rem;
+      }
+      .site-wrap:before {
+        background: rgba(0, 0, 0, 0.6);
+        content: "";
+        position: absolute;
+        z-index: 2000;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .btn {
+        text-transform: uppercase;
+        position: relative;
+        top: 0;
+        letter-spacing: 0.05em;
+      }
+      .btn.btn-sm {
+        font-size: 0.9rem;
+      }
+      .btn.btn-primary {
+        font-weight: 300;
+        letter-spacing: 0.2em;
+      }
+      .text-white-opacity-05 {
+        color: #ffffff80;
+      }
+      .site-mobile-menu {
+        width: 300px;
+        position: fixed;
+        right: 0;
+        z-index: 2000;
+        padding-top: 20px;
+        background: #fff;
+        height: 100vh;
+        -webkit-transform: translateX(110%);
+        -ms-transform: translateX(110%);
+        transform: translate(110%);
+        -webkit-box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+        box-shadow: -10px 0 20px -10px #0000001a;
+      }
+      .site-mobile-menu .site-mobile-menu-header {
+        width: 100%;
+        float: left;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close {
+        float: right;
+        margin-top: 8px;
+      }
+      .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
+        font-size: 30px;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 0;
+        line-height: 1;
+      }
+      .site-mobile-menu .site-mobile-menu-body {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        padding: 20px 20px 150px;
+        height: calc(100vh - 52px);
+      }
+      .site-blocks-cover {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-position: center center;
+      }
+      .site-blocks-cover,
+      .site-blocks-cover .row {
+        min-height: 600px;
+        height: 100vh;
+      }
+      .site-blocks-cover h2 {
+        color: #fff;
+      }
+      .site-blocks-cover p {
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      @media (max-width: 991.98px) {
+        .display-4 {
+          font-size: 1.8rem;
+        }
+      }
+      .navbar-brand {
+        font-family: Goldman, cursive;
+        font-size: 2rem;
+      }
+      @media all and (max-width: 992px) {
+        ul.navbar-nav {
+          align-items: flex-end;
+          margin-right: 0.75rem;
+        }
+      }
+      @media all and (max-width: 400px) {
+        .navbar-brand {
+          font-size: 1.8rem;
+          margin-right: 0;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      h1 {
+        font-size: inherit;
+      }
+      .navbar {
+        backdrop-filter: blur(10px);
+        background-color: #000000d9;
+        box-shadow: 0 0 0.5em #00000080;
+        position: fixed;
+        width: 100%;
+      }
+      #navbar h1 {
+        margin-bottom: 0;
+      }
+      .nav-item {
+        color: #000 !important;
+      }
+      .nav-item.active .nav-link {
+        color: #fff !important;
+      }
+      #hero {
+        background-position: 8% center;
+      }
+      .btn-primary {
+        background-color: #000;
+        border-color: #000;
+      }
+      #btnListenNow {
+        background-color: #000;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900&amp;display=swap"
+      media="print"
+      onload="this.media='screen'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman&amp;display=swap"
+      media="print"
+      onload="this.media='screen'"
+    />
+    <link
+      rel="preload"
+      href="fonts/icomoon/icomoon.ttf?10si43"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="main.css"
+      media="print"
+      onload="this.media='screen'"
+    />
 </head>
 
 <body>
