@@ -55,16 +55,9 @@
     "author": "Greg Hunter",
     "authorEmail": "gregory.hunter@live.ca",
     "categories": {
-      "Fiction": [
-        "Comedy Fiction"
-      ],
-      "Music": [
-        "Music Commentary",
-        "Music History"
-      ],
-      "News": [
-        "Entertainment News"
-      ]
+      "Fiction": ["Comedy Fiction"],
+      "Music": ["Music Commentary", "Music History"],
+      "News": ["Entertainment News"]
     },
     "description": "Sure... it is true. I was born when Rock n Roll was born; But even better, we Boomers in particular, have seen the evolution of the greatest variety of popular music, and here in SpaceStation23 it is my mission to celebrate and share it all!",
     "explicit": false,
@@ -851,6 +844,58 @@
         "thumbnail": "beatles-ed-sullivan.jpg",
         "title": "Re-Introducing to our show...",
         "url": "http://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep60.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-03-25",
+        "description": "Juno nominee Miss Emily's new music, a tribute to Gary Brooker and news of CJAI's new Fund Drive!",
+        "episode": 61,
+        "explicit": false,
+        "featuredArtists": "ZZ Top, Ambrosia, King Floyd, Miss Emily, Arcade Fire, Procol Harum",
+        "runtime": 2276,
+        "size": 72903923,
+        "thumbnail": "miss-emily.jpg",
+        "title": "Miss Emily and More...",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep61.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-04-08",
+        "description": "Augusta Georgia...and artist intros to some special songs.",
+        "episode": 62,
+        "explicit": false,
+        "featuredArtists": "Playing for Change, James Taylor w/ Joni Mitchell, Robin Trower, Eagles, Little Feat, Billy Joel",
+        "runtime": 2330,
+        "size": 74552354,
+        "thumbnail": "island-radio-t-shirts.jpg",
+        "title": "In their own words...",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep62.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-04-15",
+        "description": "Advisory Council Round Table and a toast to the Bride...of Jack White",
+        "episode": 63,
+        "explicit": false,
+        "featuredArtists": "Olivia Jean, Bruce Cockburn, Edward Elgar, Kansas, William Prince w Serena Ryder",
+        "runtime": 3021,
+        "size": 48342413,
+        "thumbnail": "bruce-cockburn-humans.jpg",
+        "title": "The State of the Onion....",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep63.mp3",
+        "version": ""
+      },
+      {
+        "airDate": "2022-04-29",
+        "description": "Awesome Boo-mix!  Try it... with Whiskey...  ",
+        "episode": 64,
+        "explicit": false,
+        "featuredArtists": "Jon Batiste, Wilco, Annie Lennox, Van Morrison w/ Mark Knopfler, Paul McCartney, Brandi Carlile, Gilbert Gottfried, CAAMP, K D Lang",
+        "runtime": 2528,
+        "size": 40446328,
+        "thumbnail": "jon-batiste-freedom.jpg",
+        "title": "Freedom!",
+        "url": "https://www.cjai.ca/podcast-main/SpaceStation23/SpaceStation23-Ep64.mp3",
         "version": ""
       }
     ],
